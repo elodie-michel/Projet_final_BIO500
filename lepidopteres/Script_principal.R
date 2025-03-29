@@ -8,6 +8,9 @@ source("Script_table.R")
 dossier <- "./donnees"
 g_b <- traiter_donnees(dossier)
 
+#nettoyage 
+g_b<-Col_supprimé_modifié(g_b)
+
 # Affichage des résultats
 print(head(g_b))
 

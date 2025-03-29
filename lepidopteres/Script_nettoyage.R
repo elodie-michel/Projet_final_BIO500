@@ -1,4 +1,5 @@
-nettoyer_et_convertir_colonnes <- function(g_b) {
+#pour nettoyer les données 
+Col_supprimé_modifié <- function(g_b, colonnes_a_supprimer) {
   # Avoir juste la date dans la colonne dwc_event_date
   g_b$dwc_event_date <- substr(g_b$dwc_event_date, 1, 10)
   
@@ -16,12 +17,5 @@ nettoyer_et_convertir_colonnes <- function(g_b) {
   g_b$lat <- as.numeric(g_b$lat)
   g_b$lon <- as.numeric(g_b$lon)
   
-  return(g_b)
-}
-
-
-supprimer_colonnes_non_necessaires <- function(g_b, colonnes_a_supprimer) {
-  # Supprimer les colonnes spécifiées dans le dataframe g_b
-  g_b <- g_b[, !(names(g_b) %in% colonnes_a_supprimer)]
   return(g_b)
 }

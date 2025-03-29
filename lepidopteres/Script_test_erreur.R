@@ -76,6 +76,29 @@ corriger_time_obs <- function(base_donnees) {
       time_obs = hms(time_obs)
     )
 }
+nettoyer_donnees <- function(base_donnees) {
+  library(dplyr)
+  library(lubridate)
+  
+  base_donnees %>%
+    # Enlever les NA dans "year_obs", "lat" et "lon"
+    filter(complete.cases(year_obs, lat, lon)) %>%
+    
+    # Supprimer les lignes identiques (doublons)
+    distinct() %>%
+    
+    # Conserver les observations qui sont dans les limites géographiques du monde entier
+    filter(lat >= -90 & lat <= 90 & lon >= -180 & lon <= 180) %>%
+    
+    # Supprimer les lignes avec des années erronées
+    filter(year_obs >= 1859 & year_obs <= 2023) %>%
+    
+    # Corriger la colonne 'time_obs'
+    mutate(
+      time_obs = ifelse(time_obs %in% c("0", "00:00:00"), NA, time_obs),
+      time_obs = hms(time_obs)
+    )
+}
 
 
 

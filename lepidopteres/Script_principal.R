@@ -15,22 +15,10 @@ print(head(g_b))
 g_b <- test_erreurs(g_b)
 
 #Étapes pour la création des tableaux 
-
-#Création nouvelle colonne "id_obs" dans la base de données
-g_b <- ajouter_id_obs(g_b)
-
-#Création d'un identifiant "id_droits" pour chaque combinaison de colonne "creator, publisher, title, etc."
-g_b <- ajouter_id_droits(g_b)
-
-#Création de la table des observations (id_obs,id_droits, observed_scientific_name, lat, lon, obs_value)
-table_obs <- creer_table_1(g_b)
-
-#Création de la table temporelle (id_obs, dwc_event_date, year_obs, day_obs, time_obs)
-table_temps <- creer_table_2 (g_b)
-
-#Création de la table des droits (id_droits, creator, title, publisher, intellectual_rights, license, owner, original_source)
-table_droits <- creer_table_3(g_b)
-
+table_g_b <- creer_tables(g_b)
+table_obs <- table_g_b$table_obs
+table_temps <- table_g_b$table_temps
+table_droits <- table_g_b$table_droits
 
 #install.packages('RSQLite')
 library(RSQLite)

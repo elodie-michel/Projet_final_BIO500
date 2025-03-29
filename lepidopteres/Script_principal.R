@@ -11,24 +11,8 @@ g_b <- traiter_donnees(dossier)
 # Affichage des résultats
 print(head(g_b))
 
-
 #Tests pour retirer les erreurs potentielles de la base de données principale
-
-#Test 1, pour enlever les NA dans les colonnes numériques
-g_b <- enlever.na(g_b)
-
-#Test 2, pour retirer les lignes identiques 
-g_b <- supprimer_lignes_identiques(g_b)
-
-#Test 3, pour filtrer les lignes selon les limites géographiques du monde entier
-g_b <- filtrer_limites_geographiques (g_b)
-
-#Test 4, pour supprimer les lignes avec des années erronées
-g_b <- filtrer_limites_temporelles (g_b)
-
-#Test 5, pour éliminer les valeurs de temps non-standard ou égal à zéro et changement en format HMS
-g_b <- corriger_time_obs(g_b)
-
+g_b <- test_erreurs(g_b)
 
 #Étapes pour la création des tableaux 
 

@@ -23,6 +23,7 @@ table_obs <- table_g_b$table_obs
 table_temps <- table_g_b$table_temps
 table_droits <- table_g_b$table_droits
 
+
 #install.packages('RSQLite')
 library(RSQLite)
 con <- dbConnect(SQLite(), dbname="lepidopteres.db")

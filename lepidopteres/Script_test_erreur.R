@@ -1,8 +1,6 @@
 #Fonction avec les différents tests pour détecter et corriger les erreurs
 test_erreurs <- function(base_donnees) {
   #ajouter les packages nécessaires
-  install.packages("dyplr")
-  install.packages("lubridate")
   library(dplyr)
   library(lubridate)
   
@@ -25,7 +23,4 @@ test_erreurs <- function(base_donnees) {
       time_obs = hms(time_obs)
     )
 }
-
-
-
 

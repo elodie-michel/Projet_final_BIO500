@@ -5,21 +5,23 @@ source("Script_test_erreur.R")
 source("Script_table.R")
 source("Script_SQL.R")
 
+
 # Traitement de données
 dossier <- "./donnees"
-g_b <- traiter_donnees(dossier)
+g_b_brut <- traiter_donnees(dossier)
 
 #nettoyage 
-g_b<-Col_supprimé_modifié(g_b)
+# Utilise la valeur par défaut
+g_b_nettoye<-Col_supprimé_modifié(g_b_brut)
 
 # Affichage des résultats
-print(head(g_b))
+print(head(g_b_nettoye))
 
 #Tests pour retirer les erreurs potentielles de la base de données principale
-g_b <- test_erreurs(g_b)
+g_b_final <- test_erreurs(g_b_nettoye)
 
 #Étapes pour la création des tableaux 
-table_g_b <- creer_tables(g_b)
+table_g_b <- creer_tables(g_b_final)
 table_obs <- table_g_b$table_obs
 table_temps <- table_g_b$table_temps
 table_droits <- table_g_b$table_droits

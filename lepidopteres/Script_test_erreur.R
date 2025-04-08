@@ -23,4 +23,3 @@ test_erreurs <- function(base_donnees) {
       time_obs = hms(time_obs)
     )
 }
-

@@ -9,11 +9,9 @@ creer_base_de_donnees_SQL <- function(nom_bd, table_obs, table_temps, table_droi
   # Forcer les bons formats
   table_temps <- table_temps %>%
     mutate(
-      dwc_event_date = as.character(dwc_event_date),
-      time_obs = as.character(time_obs)
+      dwc_event_date = as.character(dwc_event_date)
     )
 
-  
   # Supprimer les tables si elles existent déjà
   dbExecute(con, "DROP TABLE IF EXISTS observations;")
   dbExecute(con, "DROP TABLE IF EXISTS temps;")

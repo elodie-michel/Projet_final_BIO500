@@ -12,7 +12,7 @@ g_b_brut <- traiter_donnees(dossier)
 
 #nettoyage 
 # Utilise la valeur par défaut
-g_b_nettoye<-Col_supprimé_modifié(g_b_brut)
+g_b_nettoye<-Col_supprime_modifie(g_b_brut)
 
 # Affichage des résultats
 print(head(g_b_nettoye))

@@ -5,6 +5,11 @@ creer_base_de_donnees_SQL <- function(nom_bd, table_obs, table_temps, table_droi
   # Connexion à la base de données SQLite
   con <- dbConnect(SQLite(), dbname = nom_bd)
   
+  # Supprimer les tables si elles existent déjà
+  dbExecute(con, "DROP TABLE IF EXISTS observations;")
+  dbExecute(con, "DROP TABLE IF EXISTS temps;")
+  dbExecute(con, "DROP TABLE IF EXISTS droits;")
+  
   # Création des tables
   requetes_sql <- list(
     'CREATE TABLE observations (
@@ -41,8 +46,11 @@ creer_base_de_donnees_SQL <- function(nom_bd, table_obs, table_temps, table_droi
     );'
   )
   
-  # Exécuter les requêtes SQL pour créer les tables
-  lapply(requetes_sql, function(requete) dbSendQuery(con, requete))
+  # Exécuter les requêtes SQL pour créer les tables et libérer les résultats
+  lapply(requetes_sql, function(requete) {
+    query_result <- dbSendQuery(con, requete)
+    dbClearResult(query_result)  # Libérer les résultats après l'exécution de la requête
+  })
   
   # Injection des enregistrements dans la BD
   dbWriteTable(con, append = TRUE, name = "observations", value = table_obs, row.names = FALSE)
@@ -54,3 +62,4 @@ creer_base_de_donnees_SQL <- function(nom_bd, table_obs, table_temps, table_droi
   
   message("Base de données créée et données insérées avec succès.")
 }
+

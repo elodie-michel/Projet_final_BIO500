@@ -1,0 +1,15 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+g_b_brut|stem|a7a83f737a400eab|cdb17769d4aed64a|12d8ce85a0204e1a|-833009999||t20186.6964096566s|s5909274b|5909274|rds|local|vector|||13.97|NAs introduced by coercion. NAs introduced by coercion|
+dossier|stem|7b21586542958755|7f598edc119dce1e|2c530c1562a7fbd1|171394814|./donnees|t20176.0977447836s|s40960b|40960|file|local|vector|||1.34|package dplyr was built under R version 4.3.3. package RSQLite was built under R version 4.3.3. package lubridate was built under R version 4.3.3|
+g_b_nettoye|stem|185ad600bfb53972|bdd8337182a50bc3|dc8fe7b171984c7d|1306780994||t20186.6977896332s|s5144555b|5144555|rds|local|vector|||9.48||
+g_b_final|stem|b80c8867f8a915c6|d418c82c35200fe3|78aa6f78a377930e|-977794336||t20186.6978820527s|s4993948b|4993948|rds|local|vector|||2.81|There was 1 warning in mutate.ℹ In argument time_obs  hmstime_obs.Caused by warning in .parse_hms Some strings failed to parse|
+table_g_b|stem|81c51d4cb9249e90|2355f080e9a89b18|fbc808bc1181325b|-1980607814||t20186.6979154241s|s6452809b|6452809|rds|local|vector|||0.36||
+table_temps|stem|1d3db95c82aa42b5|888f5d2bb12c4068|220b1f0829dcd9c5|-1749683326||t20186.6979302088s|s2393932b|2393932|rds|local|vector|||0.02||
+table_obs|stem|645856e8cdb647d6|94f1d82e0ff46e2f|220b1f0829dcd9c5|-1878288736||t20186.6979450878s|s4053365b|4053365|rds|local|vector|||0||
+table_droits|stem|0ce7f86cd1d8fc30|3280f1f3313f7481|220b1f0829dcd9c5|428579802||t20186.6979457367s|s2987b|2987|rds|local|vector|||0||
+traiter_donnees|function|89fc6c188b05c642
+Col_supprime_modifie|function|b569cd6c704851b1
+creer_base_de_donnees_SQL|function|69f8c18ed3f4ba92
+test_erreurs|function|92d3adf97920b2fe
+creer_tables|function|43c3d7676fe6f67a
+base_sqlite|stem|24199384817988c2|d6e16a02409a4ab1|5248e5c92116d3dd|1503412467|lepidopteres.db|t20186.7139682436s|s26435584b|26435584|file|local|vector|||20.78||

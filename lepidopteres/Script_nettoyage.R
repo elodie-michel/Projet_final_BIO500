@@ -1,7 +1,7 @@
 #Nettoyage de données
 
 #pour nettoyer les données 
-Col_supprimé_modifié <- function(g_b, colonnes_a_supprimer) {
+Col_supprime_modifie <- function(g_b, colonnes_a_supprimer) {
   # Avoir juste la date dans la colonne dwc_event_date
   g_b$dwc_event_date <- substr(g_b$dwc_event_date, 1, 10)
   

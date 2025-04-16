@@ -11,7 +11,7 @@ g_b_brut <- traiter_donnees(dossier)
 
 #nettoyage 
 # Utilise la valeur par défaut
-g_b_nettoye<-Col_supprime_modifie(g_b_brut)
+g_b_nettoye<-nettoyer_les_donnees(g_b_brut)
 
 #Tests pour retirer les erreurs potentielles de la base de données principale
 g_b_final <- test_erreurs(g_b_nettoye)

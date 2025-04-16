@@ -23,7 +23,7 @@ list(
   ),
   tar_target(
     name = g_b_nettoye,
-    command = Col_supprime_modifie(g_b_brut)
+    command = nettoyer_les_donnees(g_b_brut)
   ),
   tar_target(
     name = g_b_final,

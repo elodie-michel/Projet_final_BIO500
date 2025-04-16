@@ -2,6 +2,10 @@
 
 #pour nettoyer les données 
 Col_supprime_modifie <- function(g_b, colonnes_a_supprimer) {
+  
+  # Ajouter la colonne is_valid, initialement à TRUE
+  g_b$is_valid <- TRUE
+  
   # Avoir juste la date dans la colonne dwc_event_date
   g_b$dwc_event_date <- substr(g_b$dwc_event_date, 1, 10)
   
@@ -20,6 +24,12 @@ Col_supprime_modifie <- function(g_b, colonnes_a_supprimer) {
   # Convertir les colonnes lat et lon en numériques
   g_b$lat <- as.numeric(g_b$lat)
   g_b$lon <- as.numeric(g_b$lon)
+  
+  # Fusionner 'titre' et 'title'
+  if ("title" %in% names(g_b)) {
+    g_b$titre <- ifelse(is.na(g_b$titre) | g_b$titre == "", g_b$title, g_b$titre)
+    g_b$title <- NULL
+  }
   
   return(g_b)
 }

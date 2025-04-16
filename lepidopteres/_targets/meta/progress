@@ -1,9 +1,12 @@
 name|type|parent|branches|progress
 dossier|stem|dossier|0|skipped
 g_b_brut|stem|g_b_brut|0|skipped
-g_b_nettoye|stem|g_b_nettoye|0|skipped
-g_b_final|stem|g_b_final|0|skipped
-table_g_b|stem|table_g_b|0|skipped
+g_b_nettoye|stem|g_b_nettoye|0|dispatched
+g_b_nettoye|stem|g_b_nettoye|0|completed
+g_b_final|stem|g_b_final|0|dispatched
+g_b_final|stem|g_b_final|0|completed
+table_g_b|stem|table_g_b|0|dispatched
+table_g_b|stem|table_g_b|0|completed
 table_temps|stem|table_temps|0|skipped
 table_obs|stem|table_obs|0|skipped
 table_droits|stem|table_droits|0|skipped

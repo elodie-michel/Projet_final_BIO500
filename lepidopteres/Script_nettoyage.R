@@ -29,7 +29,7 @@ nettoyer_les_donnees <- function(g_b, colonnes_a_supprimer) {
   g_b$lat <- as.numeric(g_b$lat)
   g_b$lon <- as.numeric(g_b$lon)
   
-  # Fusionner les colonnes 'titre' et 'title'
+  # Fusionner les colonnes 'titre' et 'title' (on garde juste la colonne titre)
   if ("title" %in% names(g_b)) {
     g_b$titre <- ifelse(is.na(g_b$titre) | g_b$titre == "", g_b$title, g_b$titre)
     g_b$title <- NULL

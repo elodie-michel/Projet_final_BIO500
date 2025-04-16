@@ -9,11 +9,13 @@ Col_supprime_modifie <- function(g_b, colonnes_a_supprimer) {
   g_b$observed_scientific_name <- as.character(g_b$observed_scientific_name)
   g_b$dwc_event_date <- as.Date(g_b$dwc_event_date)
   
-  # Modifier la colonne obs_variable
-  g_b$obs_variable <- g_b$obs_variable %in% c("presence", "occurrence", "abundance", "pr@#sence")
   
-  # Convertir la colonne obs_value en entier
-  g_b$obs_value <- as.integer(g_b$obs_value)
+  #Séparer les presences et abundance pour uniformiser le tout
+  
+  g_b$obs_variable <- tolower(g_b$obs_variable)  # En minuscule, au cas où
+  g_b$obs_variable[g_b$obs_variable %in% c("occurrence", "pr@#sence")] <- "presence"
+  g_b$obs_variable[!g_b$obs_variable %in% c("presence", "abundance")] <- NA  # Optionnel : mettre NA aux autres
+  
   
   # Convertir les colonnes lat et lon en numériques
   g_b$lat <- as.numeric(g_b$lat)

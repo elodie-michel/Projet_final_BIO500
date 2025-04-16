@@ -42,7 +42,7 @@ creer_base_de_donnees_SQL <- function(nom_bd, table_obs, table_temps, table_droi
     'CREATE TABLE droits (
       id_droits INTEGER NOT NULL,
       creator VARCHAR(100),
-      title VARCHAR(100),
+      titre VARCHAR(100),
       publisher VARCHAR(100),
       intellectual_rights VARCHAR(100),
       license VARCHAR(100),

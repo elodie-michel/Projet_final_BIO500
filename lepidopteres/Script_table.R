@@ -13,7 +13,7 @@ creer_tables <- function(base_de_donnees) {
   ajouter_id_droits <- function(base_de_donnees) {
     library(data.table)
     setDT(base_de_donnees) # Convertir en data.table
-    base_de_donnees[, id_droits := .GRP, by = .(creator, title, publisher, intellectual_rights, license, owner, original_source)]
+    base_de_donnees[, id_droits := .GRP, by = .(creator, titre, publisher, intellectual_rights, license, owner, original_source)]
     return(base_de_donnees)
   }
   base_de_donnees <- ajouter_id_droits(base_de_donnees)
@@ -35,7 +35,7 @@ creer_tables <- function(base_de_donnees) {
   # Fonction pour créer une table des droits
   creer_table_3 <- function(base_donnees) {
     base_donnees %>%
-      select(id_droits, creator, title, publisher, intellectual_rights, license, owner, original_source) %>%
+      select(id_droits, creator, titre, publisher, intellectual_rights, license, owner, original_source) %>%
       distinct()
   }
   table_droits <- creer_table_3(base_de_donnees)

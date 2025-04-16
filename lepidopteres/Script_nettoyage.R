@@ -23,7 +23,7 @@ nettoyer_les_donnees <- function(g_b, colonnes_a_supprimer) {
   
   g_b$obs_variable <- tolower(g_b$obs_variable)  # En minuscule, au cas où
   g_b$obs_variable[g_b$obs_variable %in% c("occurrence", "pr@#sence")] <- "presence"
-  g_b$obs_variable[!g_b$obs_variable %in% c("presence", "abundance")] <- NA  # Optionnel : mettre NA aux autres
+  g_b$obs_variable[!g_b$obs_variable %in% c("presence", "abundance")] <- NA  # Mettre NA aux autres
   
   # Convertir les colonnes lat et lon en numériques
   g_b$lat <- as.numeric(g_b$lat)

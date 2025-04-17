@@ -1,14 +1,17 @@
 library(targets)
 library(tarchetypes)
 
-source("Script_prefusion.R")
-source("Script_nettoyage.R")
-source("Script_test_erreur.R")
-source("Script_table.R")
-source("Script_SQL.R")
-source("Script_figure_1.R")
+source("R/Script_prefusion.R")
+source("R/Script_nettoyage.R")
+source("R/Script_test_erreur.R")
+source("R/Script_table.R")
+source("R/Script_SQL.R")
+source("R/Script_figure_1.R")
+source("R/Script_figure_2.R")
+source("R/Script_figure_3.R")
+
 tar_option_set(
-  packages = c("dplyr", "RSQLite", "lubridate", "data.table")
+  packages = c("dplyr", "RSQLite", "lubridate", "data.table", "DBI", "sf", "ggplot2", "rmarkdown","knitr")
 )
 
 list(
@@ -59,7 +62,18 @@ list(
     format = "file"
   ),
   tar_target(
-    name = figure_richesse,
-    command = generer_figure_richesse(fichier_db = base_sqlite)
+    name = figure_richesse_temporelle,
+    command = figure_richesse_temporelle(base_sqlite),
+    format = "file"
+  ),
+  tar_target(
+    name = figure_richesse_spatiale,
+    command = figure_richesse_spatiale(base_sqlite, quebec),
+    format = "file"
+  ),
+  tar_target(
+    name = figure_phenologie,
+    command = figure_phenologie(base_sqlite, 10),
+    format = "file"
   )
 )

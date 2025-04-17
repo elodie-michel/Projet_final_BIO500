@@ -4,10 +4,17 @@ figure_richesse_spatiale <- function(db_path, shapefile_sf) {
   library(dplyr)
   library(RSQLite)
   
+  # Créer le dossier figures s'il n'existe pas
+  if (!dir.exists("figures")) {
+    dir.create("figures")
+  }
+  
+  # Définir le chemin de sortie
+  output_path <- "figures/richesse_spatiale.png"
+  
   # Connexion à la base de données
   con <- dbConnect(SQLite(), db_path)
   
-  # Requête SQL pour extraire la richesse spécifique
   requete <- "
     SELECT 
       ROUND(lat, 1) AS lat_bin,
@@ -28,13 +35,13 @@ figure_richesse_spatiale <- function(db_path, shapefile_sf) {
     shapefile_sf <- st_make_valid(shapefile_sf)
   }
   
-  # S'assurer que les CRS sont identiques
+  # Harmoniser les CRS
   shapefile_sf <- st_transform(shapefile_sf, st_crs(richesse_sf))
   
-  # Filtrer les points à l’intérieur des polygones
+  # Filtrer les points dans le shapefile
   richesse_quebec <- st_filter(richesse_sf, shapefile_sf)
   
-  # Créer la carte
+  # Création de la carte
   p <- ggplot() +
     geom_sf(data = shapefile_sf, fill = "lightgray", color = "black") +
     geom_sf(data = richesse_quebec, aes(color = richesse), size = 0.2) +
@@ -50,8 +57,12 @@ figure_richesse_spatiale <- function(db_path, shapefile_sf) {
       legend.position = "right"
     )
   
-  return(p)
+  # Sauvegarde de la figure
+  ggsave(output_path, plot = p, width = 10, height = 8)
+  
+  return(output_path)
 }
+
 
 # Charger la carte du Québec
 quebec <- st_read("donnees/donnees_cartographiques/bordure_quebec.shp")

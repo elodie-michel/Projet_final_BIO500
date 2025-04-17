@@ -1,5 +1,4 @@
 figure_phenologie <- function(nom_bd, n_especes) {
-  # Chargement des librairies nécessaires
   suppressMessages({
     library(DBI)
     library(RSQLite)
@@ -8,11 +7,17 @@ figure_phenologie <- function(nom_bd, n_especes) {
     library(lubridate)
   })
   
-  # Connexion à la base de données
-  con <- dbConnect(SQLite(), nom_bd)
-  on.exit(dbDisconnect(con), add = TRUE)  # Déconnexion automatique à la fin
+  # Créer le dossier figures s'il n'existe pas
+  if (!dir.exists("figures")) {
+    dir.create("figures")
+  }
   
-  # Requête SQL
+  output_path <- "figures/phenologie.png"  # <- chemin de sortie
+  
+  # Connexion à la base
+  con <- dbConnect(SQLite(), nom_bd)
+  on.exit(dbDisconnect(con), add = TRUE)
+  
   requete3 <- "
     SELECT o.observed_scientific_name AS taxa_name,
            t.dwc_event_date AS date_obs
@@ -21,10 +26,8 @@ figure_phenologie <- function(nom_bd, n_especes) {
     WHERE t.dwc_event_date IS NOT NULL
   "
   
-  # Exécution de la requête
   data <- dbGetQuery(con, requete3)
   
-  # Nettoyage et transformation
   data <- data %>%
     mutate(date_obs = as.Date(date_obs),
            jour_annee = yday(date_obs),
@@ -43,8 +46,7 @@ figure_phenologie <- function(nom_bd, n_especes) {
     arrange(desc(presence_days)) %>%
     slice_head(n = n_especes)
   
-  # Graphique
-  ggplot(summary_data, aes(y = reorder(taxa_name, presence_days), x = start_date, xend = end_date)) +
+  p <- ggplot(summary_data, aes(y = reorder(taxa_name, presence_days), x = start_date, xend = end_date)) +
     geom_segment(aes(yend = taxa_name), color = "#8888aa", linewidth = 1.2) +
     geom_point(aes(x = start_date), color = "#1f78b4", size = 4) +
     geom_point(aes(x = end_date), color = "#e66101", size = 4) +
@@ -75,6 +77,9 @@ figure_phenologie <- function(nom_bd, n_especes) {
     theme(axis.text.x = element_text(angle = 45, hjust = 1),
           axis.text.y = element_text(margin = margin(r = 10)),
           plot.title = element_text(size = 18, face = "bold"))
+  
+  # Sauvegarde du graphique
+  ggsave(output_path, plot = p, width = 12, height = 9)
+  
+  return(output_path)
 }
-
-

@@ -2,10 +2,17 @@ figure_richesse_temporelle <- function(fichier_db) {
   library(DBI)
   library(RSQLite)
   
+  # Créer dossier figures s'il n'existe pas
+  if (!dir.exists("figures")) {
+    dir.create("figures")
+  }
+  
+  # Définir le chemin du fichier de sortie
+  output_path <- "figures/richesse_temporelle.png"
+  
   # Connexion à la base de données
   con <- dbConnect(SQLite(), fichier_db)
   
-  # Bloc tryCatch pour s'assurer que la déconnexion se fait quoiqu'il arrive
   tryCatch({
     # Requête SQL
     requete <- "
@@ -20,6 +27,9 @@ figure_richesse_temporelle <- function(fichier_db) {
     
     # Filtrer les données post-2000
     df_recent <- df[df$year_obs >= 2000, ]
+    
+    # Ouvrir un périphérique graphique PNG
+    png(filename = output_path, width = 1000, height = 800, res = 120)
     
     # Paramètres graphiques
     par(mfrow = c(2, 1))
@@ -41,10 +51,15 @@ figure_richesse_temporelle <- function(fichier_db) {
     mtext("(b)", side = 3, line = 0.5, adj = 0, cex = 1.2)
     grid()
     
+    # Fermer le fichier image
+    dev.off()
   },
   finally = {
-    # Toujours fermer la connexion même en cas d'erreur
     dbDisconnect(con)
   })
+  
+  # Retourner le chemin du fichier image
+  return(output_path)
 }
+
 

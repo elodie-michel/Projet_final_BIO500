@@ -5,6 +5,8 @@ source("R/Script_test_erreur.R")
 source("R/Script_table.R")
 source("R/Script_SQL.R")
 source("R/Script_figure_1.R")
+source("R/Script_figure_2.R")
+source("R/Script_figure_3.R")
 
 # Traitement de données
 dossier <- "./donnees"
@@ -27,4 +29,10 @@ table_droits <- table_g_b$table_droits
 creer_base_de_donnees_SQL("lepidopteres.db", table_obs, table_temps, table_droits)
 
 #Créer la figure 1 de richesse spécifiques par année
-generer_figure_richesse()
+figure_richesse_temporelle("lepidopteres.db")
+
+#Créer la figure 2 de richesse spécifique spatiale 
+figure_richesse_spatiale("lepidopteres.db", quebec)
+
+#créer la figure 3 de phénologie 
+figure_phenologie("lepidopteres.db", 10)

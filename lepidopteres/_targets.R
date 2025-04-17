@@ -6,7 +6,7 @@ source("Script_nettoyage.R")
 source("Script_test_erreur.R")
 source("Script_table.R")
 source("Script_SQL.R")
-
+source("Script_figure_1.R")
 tar_option_set(
   packages = c("dplyr", "RSQLite", "lubridate", "data.table")
 )
@@ -57,5 +57,9 @@ list(
       "lepidopteres.db"
     },
     format = "file"
+  ),
+  tar_target(
+    name = figure_richesse,
+    command = generer_figure_richesse(fichier_db = base_sqlite)
   )
 )

@@ -1,0 +1,67 @@
+---
+title: rapport BIO500
+
+author:
+  - name: Éloïse Paquette, Danaé Vaillancourt, Élodie Michel et Camille Breton
+
+lineno: false
+
+output: pdf_document
+
+---
+
+
+Introduction {.unnumbered}
+========================================
+
+Please note that whilst this template provides a preview of the typeset
+manuscript for submission, to help in this preparation, it will not
+necessarily be the final publication layout. For more detailed
+information please see the [PNAS Information for
+Authors](http://www.pnas.org/site/authors/format.xhtml).
+
+
+Méthode {#author-affiliations .unnumbered}
+-------------------
+
+Include department, institution, and complete address, with the
+ZIP/postal code, for each author. Use lower case letters to match
+authors with institutions, as shown in the example. Authors with an
+ORCID ID may supply this information at submission.
+
+Résultats {#submitting-manuscripts .unnumbered}
+----------------------
+
+Voici l'évolution de la richesse spécifique à travers le temps :
+
+```{r fig.richesse, echo=FALSE, out.width="0.9\\linewidth", fig.cap="Richesse spécifique selon le temps"}
+fig_rich <- tar_read(figure_richesse)
+knitr::include_graphics(fig_rich)
+```
+
+
+```{r phenologie, echo=FALSE, fig.cap="Phénologie des espèces les plus observées", out.width='100%'}
+fig_pheno <- tar_read(figure_phenologie)
+knitr::include_graphics(fig_pheno)
+```
+Discussion {#format .unnumbered}
+------
+
+Many authors find it useful to organize their manuscripts with the
+following order of sections; Title, Author Affiliation, Keywords,
+Abstract, Significance Statement, Results, Discussion, Materials and
+methods, Acknowledgments, and References. Other orders and headings are
+permitted.
+
+conclusion {#manuscript-length .unnumbered}
+-----------------
+
+PNAS generally uses a two-column format averaging 67 characters,
+including spaces, per line. The maximum length of a Direct Submission
+research article is six pages and a PNAS PLUS research article is ten
+pages including all text, spaces, and the number of characters displaced
+by figures, tables, and equations. When submitting tables, figures,
+and/or equations in addition to text, keep the text for your manuscript
+under 39,000 characters (including spaces) for Direct Submissions and
+72,000 characters (including spaces) for PNAS PLUS.
+x

@@ -38,11 +38,18 @@ ORCID ID may supply this information at submission.
 Résultats {#submitting-manuscripts .unnumbered}
 ----------------------
 
-All authors must submit their articles at
-[PNAScentral](http://www.pnascentral.org/cgi-bin/main.plex). If you are
-using Overleaf to write your article, you can use the "Submit to PNAS"
-option in the top bar of the editor window.
+Voici l'évolution de la richesse spécifique à travers le temps :
 
+```{r fig.richesse, echo=FALSE, out.width="0.9\\linewidth", fig.cap="Richesse spécifique selon le temps"}
+fig_rich <- tar_read(figure_richesse)
+knitr::include_graphics(fig_rich)
+```
+
+
+```{r phenologie, echo=FALSE, fig.cap="Phénologie des espèces les plus observées", out.width='100%'}
+fig_pheno <- tar_read(figure_phenologie)
+knitr::include_graphics(fig_pheno)
+```
 
 Discussion {#format .unnumbered}
 ------

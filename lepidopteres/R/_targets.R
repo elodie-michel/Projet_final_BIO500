@@ -75,5 +75,11 @@ list(
     name = figure_phenologie,
     command = figure_phenologie(base_sqlite, 10),
     format = "file"
+  ),
+  tar_render(
+    name = rapport,
+    path = "rapport/rapport_final_BIO500/rapport_final_BIO500.Rmd",  # Mon fichier RMarkdown
+    output_file = "rapport_final.html",  # Facultatif : nom de sortie
+    output_dir = "rapport"  # Facultatif : dossier de sortie
   )
 )

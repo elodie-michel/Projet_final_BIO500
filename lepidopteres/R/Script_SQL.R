@@ -4,7 +4,9 @@ creer_base_de_donnees_SQL <- function(nom_bd, table_obs, table_temps, table_droi
   
   
   # Connexion à la base de données SQLite
-  con <- dbConnect(SQLite(), dbname = nom_bd)
+  chemin_complet <- file.path("R", nom_bd)
+  con <- dbConnect(SQLite(), dbname = chemin_complet)
+
   
   # Forcer les bons formats
   table_temps <- table_temps %>%

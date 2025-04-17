@@ -1,4 +1,4 @@
-generer_figure_richesse <- function(fichier_db = "lepidopteres.db") {
+figure_richesse_temporelle <- function(fichier_db) {
   library(DBI)
   library(RSQLite)
   

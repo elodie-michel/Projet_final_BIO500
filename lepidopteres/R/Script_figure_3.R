@@ -1,4 +1,4 @@
-graphique_phenologie <- function(nom_bd = "lepidopteres.db", n_especes = 10) {
+figure_phenologie <- function(nom_bd, n_especes) {
   # Chargement des librairies nécessaires
   suppressMessages({
     library(DBI)
@@ -76,5 +76,5 @@ graphique_phenologie <- function(nom_bd = "lepidopteres.db", n_especes = 10) {
           axis.text.y = element_text(margin = margin(r = 10)),
           plot.title = element_text(size = 18, face = "bold"))
 }
-graphique_phenologie()
+
 

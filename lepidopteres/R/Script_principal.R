@@ -1,10 +1,10 @@
 # Charger les fonctions
-source("Script_prefusion.R")
-source("Script_nettoyage.R")
-source("Script_test_erreur.R")
-source("Script_table.R")
-source("Script_SQL.R")
-source("Script_figure_1.R")
+source("R/Script_prefusion.R")
+source("R/Script_nettoyage.R")
+source("R/Script_test_erreur.R")
+source("R/Script_table.R")
+source("R/Script_SQL.R")
+source("R/Script_figure_1.R")
 
 # Traitement de données
 dossier <- "./donnees"

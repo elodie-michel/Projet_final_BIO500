@@ -4,6 +4,7 @@ source("Script_nettoyage.R")
 source("Script_test_erreur.R")
 source("Script_table.R")
 source("Script_SQL.R")
+source("Script_figure_1.R")
 
 # Traitement de données
 dossier <- "./donnees"
@@ -24,3 +25,6 @@ table_droits <- table_g_b$table_droits
 
 # Création de la base de données SQLite et insertion des données
 creer_base_de_donnees_SQL("lepidopteres.db", table_obs, table_temps, table_droits)
+
+#Créer la figure 1 de richesse spécifiques par année
+generer_figure_richesse()

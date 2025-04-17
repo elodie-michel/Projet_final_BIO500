@@ -18,6 +18,9 @@ creer_tables <- function(base_de_donnees) {
   }
   base_de_donnees <- ajouter_id_droits(base_de_donnees)
   
+  #On garde seulement les lignes où on a pas d'erreurs et qu'on a toutes les informations nécessaires pour les analyses (is_valid = TRUE)
+  base_de_donnees <- base_de_donnees %>% filter(is_valid == TRUE)
+  
   # Fonction pour créer une table pour les observations
   creer_table_1 <- function(base_donnees) {
     base_donnees %>%

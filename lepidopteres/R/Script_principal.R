@@ -9,6 +9,7 @@ source("R/Script_figure_2.R")
 source("R/Script_figure_3.R")
 
 # Charger la carte du Québec pour le filtrage des coordonnées
+library(sf)
 quebec <- st_read("donnees/donnees_cartographiques/bordure_quebec.shp")
 
 # Traitement de données

@@ -3,12 +3,12 @@ figure_richesse_temporelle <- function(fichier_db) {
   library(RSQLite)
   
   # Créer dossier figures s'il n'existe pas
-  if (!dir.exists("figures")) {
-    dir.create("figures")
+  if (!dir.exists("lepidopteres/figures")) {
+    dir.create("lepidopteres/figures")
   }
   
   # Définir le chemin du fichier de sortie
-  output_path <- "figures/richesse_temporelle.png"
+  output_path <- "lepidopteres/figures/richesse_temporelle.png"
   
   # Connexion à la base de données
   con <- dbConnect(SQLite(), fichier_db)

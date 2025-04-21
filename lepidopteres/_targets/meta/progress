@@ -1,14 +1,6 @@
 name|type|parent|branches|progress
 quebec|stem|quebec|0|dispatched
 quebec|stem|quebec|0|completed
-dossier|stem|dossier|0|dispatched
-dossier|stem|dossier|0|completed
-g_b_brut|stem|g_b_brut|0|skipped
-g_b_nettoye|stem|g_b_nettoye|0|skipped
-g_b_final|stem|g_b_final|0|skipped
-table_g_b|stem|table_g_b|0|skipped
-table_temps|stem|table_temps|0|skipped
-table_obs|stem|table_obs|0|skipped
-table_droits|stem|table_droits|0|skipped
-base_sqlite|stem|base_sqlite|0|dispatched
-base_sqlite|stem|base_sqlite|0|completed
+dossier|stem|dossier|0|skipped
+rapport|stem|rapport|0|dispatched
+rapport|stem|rapport|0|errored

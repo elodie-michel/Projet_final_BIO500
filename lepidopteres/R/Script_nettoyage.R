@@ -14,8 +14,8 @@ nettoyer_les_donnees <- function(g_b, colonnes_a_supprimer) {
   g_b$observed_scientific_name <- as.character(g_b$observed_scientific_name)
   g_b$dwc_event_date <- as.Date(g_b$dwc_event_date)
   
-  #Fitrer les donnees pour utiliser juste celles avec un nom scientifique d'espèce bien écrit
-  taxo <- read.csv("donnees/taxonomie.csv")
+  #Filtrer les donnees pour utiliser juste celles avec un nom scientifique d'espèce bien écrit
+  taxo <- read.csv("lepidopteres/donnees/taxonomie.csv")
   noms_valides <- unique(taxo$observed_scientific_name[taxo$rank == "species"])
   g_b$is_valid[!(g_b$observed_scientific_name %in% noms_valides)] <- FALSE
   

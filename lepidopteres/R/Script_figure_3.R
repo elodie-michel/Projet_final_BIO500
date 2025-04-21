@@ -8,11 +8,11 @@ figure_phenologie <- function(nom_bd, n_especes) {
   })
   
   # Créer le dossier figures s'il n'existe pas
-  if (!dir.exists("figures")) {
-    dir.create("figures")
+  if (!dir.exists("lepidopteres/figures")) {
+    dir.create("lepidopteres/figures")
   }
   
-  output_path <- "figures/phenologie.png"  # <- chemin de sortie
+  output_path <- "lepidopteres/figures/phenologie.png"  # <- chemin de sortie
   
   # Connexion à la base
   con <- dbConnect(SQLite(), nom_bd)

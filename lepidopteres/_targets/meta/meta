@@ -7,15 +7,18 @@ table_g_b|stem|1abf587122eed842|2355f080e9a89b18|89902cf031741507|-1980607814||t
 table_temps|stem|18ac94b079cc9c5b|888f5d2bb12c4068|568f8e88802dae49|-1749683326||t20199.6151533825s|s905807b|905807|rds|local|vector|||0||
 table_obs|stem|e8ef6d8cc317ee31|94f1d82e0ff46e2f|568f8e88802dae49|-1878288736||t20199.6151679187s|s2493410b|2493410|rds|local|vector|||0||
 table_droits|stem|87c8462ba94103ca|3280f1f3313f7481|568f8e88802dae49|428579802||t20199.6151684894s|s2924b|2924|rds|local|vector|||0.02||
+.Random.seed|object|71fa02319df21a7f|||||||||||||||
+quebec|stem|96f433e2c7feeb3c|9d37bc956d3bda4e|2c530c1562a7fbd1|-224390329||t20199.6316347613s|s441229b|441229|rds|local|vector|||0.08||
+base_sqlite|stem|734db133b9562e72|3549dea580ee8b3d|f753ac525fed5293|1503412467|lepidopteres.db|t20199.631709727s|s15446016b|15446016|file|local|vector|||4.42||
+dossier|stem|5d89b7b218bcc406|7f598edc119dce1e|2c530c1562a7fbd1|171394814|./donnees|t20199.5986365634s|s32768b|32768|file|local|vector|||0||
+fig_richesse_temporelle|stem|79be6e967c5c626c|3a8a17049588975a|2d47e33b3b933cf0|543854728|figures/richesse_temporelle.png|t20199.6363930588s|s19639b|19639|file|local|vector|||0.94||
+fig_richesse_spatiale|stem|f9dc99d508e7ec74|6ba24bdd30b1dda8|42863cc798e1e98a|646528546|figures/richesse_spatiale.png|t20199.6531622061s|s118072b|118072|file|local|vector|||2.68||
 traiter_donnees|function|89fc6c188b05c642
 figure_richesse_temporelle|function|403aaf569de38435
-figure_richesse_spatiale|function|faadeef9d53eca17
+figure_richesse_spatiale|function|573833f3c14fc86d
 creer_base_de_donnees_SQL|function|d94ecdd3b08c7333
-.Random.seed|object|71fa02319df21a7f
 figure_phenologie|function|ba6932dc469d1bfd
 test_erreurs|function|f31de0a3e0582125
 creer_tables|function|392705fd96cf0aa0
 nettoyer_les_donnees|function|f094bb052414a480
-quebec|stem|96f433e2c7feeb3c|9d37bc956d3bda4e|2c530c1562a7fbd1|-224390329||t20199.6316347613s|s441229b|441229|rds|local|vector|||0.08||
-dossier|stem|5d89b7b218bcc406|7f598edc119dce1e|2c530c1562a7fbd1|171394814|./donnees|t20199.5986365634s|s115792765b|115792765|file|local|vector|||0||
-base_sqlite|stem|734db133b9562e72|3549dea580ee8b3d|f753ac525fed5293|1503412467|lepidopteres.db|t20199.631709727s|s15446016b|15446016|file|local|vector|||4.42||
+fig_phenologie|stem|66d0b7bc65df1f8d|030d1eda9421e23f|69743cfc1fd492bb|-554593398|figures/phenologie.png|t20199.6546501818s|s205956b|205956|file|local|vector|||3.81|Use of summary_dataend_date is discouraged.ℹ Use end_date instead.|

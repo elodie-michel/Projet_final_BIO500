@@ -5,6 +5,14 @@ figure_richesse_spatiale <- function(db_path, shapefile_sf) {
   library(dplyr)
   library(RSQLite)
   
+  # Créer dossier figures s'il n'existe pas
+  if (!dir.exists("lepidopteres/figures")) {
+    dir.create("lepidopteres/figures")
+  }
+  
+  # Définir le chemin du fichier de sortie
+  output_path <- "lepidopteres/figures/richesse_spatiale.png"
+  
   # Connexion à la base de données
   con <- dbConnect(SQLite(), db_path)
   
@@ -33,7 +41,7 @@ figure_richesse_spatiale <- function(db_path, shapefile_sf) {
   shapefile_sf <- st_transform(shapefile_sf, st_crs(richesse_sf))
   
   # Créer la carte
-  p <- ggplot() +
+  figure2 <-ggplot() +
     geom_sf(data = shapefile_sf, fill = "lightgray", color = "black") +
     geom_sf(data = richesse_sf, aes(color = richesse), size = 0.2) +
     scale_color_viridis_c(limits = c(0, 200), oob = scales::squish) +
@@ -46,8 +54,13 @@ figure_richesse_spatiale <- function(db_path, shapefile_sf) {
       legend.title = element_text(face = "bold"),
       plot.title = element_text(face = "bold", hjust = 0.5),
       legend.position = "right"
+      
+   
     )
+  # Sauvegarder la figure
+  ggsave(output_path, plot = figure2, width = 10, height = 8, dpi = 300)
   
-  return(p)
+  # Retourner le chemin du fichier image
+  return(output_path)
 }
 

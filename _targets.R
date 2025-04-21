@@ -1,7 +1,7 @@
 library(targets)
 library(tarchetypes)
 
-tar_source("R")  # équivalent à tous tes `source(...)` actuels
+tar_source("lepidopteres/R")  # équivalent à tous tes `source(...)` actuels
 
 tar_option_set(
   packages = c("dplyr", "RSQLite", "lubridate", "data.table", "DBI", "sf", "ggplot2", "rmarkdown","knitr")
@@ -10,11 +10,11 @@ tar_option_set(
 list(
   tar_target(
     name = quebec,
-    command = st_read("donnees/donnees_cartographiques/bordure_quebec.shp")
+    command = st_read("lepidopteres/donnees/donnees_cartographiques/bordure_quebec.shp")
   ),
   tar_target(
     name = dossier,
-    command = "./donnees",
+    command = ".lepidopteres/donnees",
     format = "file"
   ),
   tar_target(
@@ -48,8 +48,8 @@ list(
   tar_target(
     name = base_sqlite,
     command = {
-      creer_base_de_donnees_SQL("lepidopteres.db", table_obs, table_temps, table_droits)
-      "lepidopteres.db"  # renvoie le fichier créé
+      creer_base_de_donnees_SQL("lepidopteres/lepidopteres.db", table_obs, table_temps, table_droits)
+      "lepidopteres/lepidopteres.db"  # renvoie le fichier créé
     },
     format = "file"
   )

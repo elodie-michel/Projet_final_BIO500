@@ -36,7 +36,6 @@ creer_base_de_donnees_SQL <- function(nom_bd, table_obs, table_temps, table_droi
       dwc_event_date DATE,
       year_obs INTEGER,
       day_obs INTEGER,
-      time_obs TIME,
       PRIMARY KEY (id_obs),
       FOREIGN KEY (id_obs) REFERENCES observations(id_obs)
     );',

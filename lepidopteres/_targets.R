@@ -48,8 +48,8 @@ list(
   tar_target(
     name = base_sqlite,
     command = {
-      creer_base_de_donnees_SQL("R/lepidopteres.db", table_obs, table_temps, table_droits)
-      "R/lepidopteres.db"  # renvoie le fichier créé
+      creer_base_de_donnees_SQL("lepidopteres.db", table_obs, table_temps, table_droits)
+      "lepidopteres.db"  # renvoie le fichier créé
     },
     format = "file"
   )
@@ -76,8 +76,6 @@ list(
     output_dir = "rapport"  # Facultatif : dossier de sortie
   )
 )
-
-
 
 
 

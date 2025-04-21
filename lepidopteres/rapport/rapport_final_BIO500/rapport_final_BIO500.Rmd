@@ -1,14 +1,13 @@
 ---
-title: rapport BIO500
+title: Rapport BIO500
 
 # Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
 author:
   - name: Éloïse Paquette, Danaé Vaillancourt, Élodie Michel et Camille Breton
 
 
+bibliography: BIO500.bib
 
-bibliography: pnas-sample.bib
-csl: pnas.csl
 
 ## change to true to add optional line numbering
 lineno: false
@@ -17,198 +16,81 @@ output: rticles::pnas_article
 ---
 
 
-Introduction {.unnumbered}
+Résumé {.unnumbered}
 ========================================
 
-Please note that whilst this template provides a preview of the typeset
-manuscript for submission, to help in this preparation, it will not
-necessarily be the final publication layout. For more detailed
-information please see the [PNAS Information for
-Authors](http://www.pnas.org/site/authors/format.xhtml).
+À l’aide de R Studio et du langage SQL, des figures ont été créées à partir d’une base de données sur les lépidoptères afin d’analyser l’effet des variations temporelles et spatiales sur leurs communautés. Après plusieurs analyses, on remarque une augmentation en richesse spécifique au fil des générations, soit très forte après les années 2000 mais très variable en deçà, probablement par une fluctuation d’effort d’échantillonnage ou par plusieurs pressions écologiques. Il y toutefois une forte concentration de la richesse spécifique dans le sud de la province du Québec et plus faible au nord, une hétérogénéité expliquée par les gradients d’altitude et de climat. Enfin, la diversité des espèces dans les dates d’arrivée et de départ suggère une niche temporelle propre à chacune, aidant à la réduction de la compétition interspécifique pour les ressources. 
 
 
-Méthode {#author-affiliations .unnumbered}
--------------------
+Introduction {.unnumbered}
+========================================
+Au sein d’une communauté et d’un territoire, les espèces s’adaptent aux nouvelles conditions et aux changements environnementaux sur une échelle de temps variable. Les interactions entre les espèces peuvent alors modifier la composition de la communauté et sa diversité @Nieto-Sánchez2015using. Cependant au sein de la famille des lépidoptères, comment les variations spatiales et temporelles influencent-elles la structure de leurs communautés ? Est-ce que certaines espèces seront impactées plus que d’autres ?
 
-Include department, institution, and complete address, with the
-ZIP/postal code, for each author. Use lower case letters to match
-authors with institutions, as shown in the example. Authors with an
-ORCID ID may supply this information at submission.
 
-Résultats {#submitting-manuscripts .unnumbered}
-----------------------
+Méthode {.unnumbered}
+========================================
+
+La base de données des lépidoptères est une liste d’observations de différentes espèces de papillons, comprenant leur nom scientifique, la date, le lieu où l’échantillon a été prélevé à l’aide de coordonnées géographiques (latitude et longitude), l’heure, le jour et l’année d’observation ainsi que tous les droits d’auteur, comprenant le créateur, le titre, les licences, la source originale et le publicateur. Cette dernière comprenant environ 441 891 observations et ce, sur un intervalle de données allant de 1859 à 2023. 
+Afin de pouvoir utiliser cette base de données, nous avons procédé à une revalidation en éliminant et triant les lacunes humaines potentielles dans l’enregistrement des données à l’aide du logiciel R studio. Une variété de tests a été exécuté pour parvenir à l’obtention de données valides et d’une reproductibilité dans nos résultats. Des erreurs non négligeables, comme des NA non-expliquer, des échantillons répétés, des valeurs irréels dans les dates, les années, les heures et même les coordonnées, devant être filtrer pour être des points seulement au Québec, ont été corrigés et l’identification des bons types par colonnes ont été modifiés. 
+Ensuite, une fois la base de données considérée comme valide, nous avons pu procéder à la création de tables, avec l’aide du langage informatique SQL, en regroupant les colonnes pertinentes ensembles, créer les liens entre ces dernières et ainsi optimiser l’analyse de nos données. En faisant des requêtes dans nos différentes tables, nous avons alors été en mesure de créer des figures nous aidant à répondre à notre question de départ. 
+Finalement, une fois tous nos manipulations insérées dans des scripts différents dans le logiciel R, nous avons procédé à l’automatisation de notre code à l’aide du package Target et ainsi créer une chaîne de traitement permettant à nos résultats d’être reproductibles. 
+
+
+
+Résultats {.unnumbered}
+========================================
 
 Voici l'évolution de la richesse spécifique à travers le temps :
 
-```{r fig.richesse, echo=FALSE, out.width="0.9\\linewidth", fig.cap="Richesse spécifique selon le temps"}
-fig_rich <- tar_read(figure_richesse)
-knitr::include_graphics(fig_rich)
-```
-
-
-```{r phenologie, echo=FALSE, fig.cap="Phénologie des espèces les plus observées", out.width='100%'}
-fig_pheno <- tar_read(figure_phenologie)
-knitr::include_graphics(fig_pheno)
-```
-
-Discussion {#format .unnumbered}
-------
-
-Many authors find it useful to organize their manuscripts with the
-following order of sections; Title, Author Affiliation, Keywords,
-Abstract, Significance Statement, Results, Discussion, Materials and
-methods, Acknowledgments, and References. Other orders and headings are
-permitted.
-
-conclusion {#manuscript-length .unnumbered}
------------------
-
-PNAS generally uses a two-column format averaging 67 characters,
-including spaces, per line. The maximum length of a Direct Submission
-research article is six pages and a PNAS PLUS research article is ten
-pages including all text, spaces, and the number of characters displaced
-by figures, tables, and equations. When submitting tables, figures,
-and/or equations in addition to text, keep the text for your manuscript
-under 39,000 characters (including spaces) for Direct Submissions and
-72,000 characters (including spaces) for PNAS PLUS.
-
-References {#references .unnumbered}
-----------
-
-References should be cited in numerical order as they appear in text;
-this will be done automatically via bibtex, e.g. @belkin2002using and
-@berard1994embedding [@coifman2005geometric]. All references, including
-for the SI, should be included in the main manuscript file. References
-appearing in both sections should not be duplicated. SI references
-included in tables should be included with the main reference section.
-
-
-Digital Figures {#sec:figures .unnumbered}
----------------
-
-Only TIFF, EPS, and high-resolution PDF for Mac or PC are allowed for
-figures that will appear in the main text, and images must be final
-size. Authors may submit U3D or PRC files for 3D images; these must be
-accompanied by 2D representations in TIFF, EPS, or high-resolution PDF
-format. Color images must be in RGB (red, green, blue) mode. Include the
-font files for any text.
-
-Figures and Tables should be labelled and referenced in the standard way
-using the `\label{}` and `\ref{}` commands.
-
-Figure \[fig:frog\] shows an example of how to insert a column-wide
-figure. To insert a figure wider than one column, please use the
-`\begin{figure*}...\end{figure*}` environment. Figures wider than one
-column should be sized to 11.4 cm or 17.8 cm wide.
-
-Single column equations {#single-column-equations .unnumbered}
------------------------
-
-Authors may use 1- or 2-column equations in their article, according to
-their preference.
-
-To allow an equation to span both columns, options are to use the
-`\begin{figure*}...\end{figure*}` environment mentioned above for
-figures, or to use the `\begin{widetext}...\end{widetext}` environment
-as shown in equation \[eqn:example\] below.
-
-Please note that this option may run into problems with floats and
-footnotes, as mentioned in the [cuted package
-documentation](http://texdoc.net/pkg/cuted). In the case of problems
-with footnotes, it may be possible to correct the situation using
-commands `\footnotemark` and `\footnotetext`.
-
-$$\begin{aligned}
-(x+y)^3&=(x+y)(x+y)^2\\
-       &=(x+y)(x^2+2xy+y^2) \label{eqn:example} \\
-       &=x^3+3x^2y+3xy^3+x^3. 
-\end{aligned}$$
 
 
 
-<!-- pandoc writes all tables using longtable, which fails in 2-column mode
+Discussion {.unnumbered}
+========================================
 
-  Species                    CBS     CV     G3
-  ----------------------- ------ ------ ------
-  1\. Acetaldehyde           0.0    0.0    0.0
-  2\. Vinyl alcohol          9.1    9.6   13.5
-  3\. Hydroxyethylidene     50.8   51.2   54.0
+Discussion figure 1 : 
 
-  : Comparison of the fitted potential energy surfaces and ab initio
-  benchmark electronic energy calculations
+La richesse spécifique observée à travers le temps révèle une dynamique marquée par une accélération récente. Pendant plus d’un siècle, la richesse observée est demeurée faible et relativement constante, ce qui pourrait s’expliquer par un effort d’échantillonnage limité ou des lacunes dans l’enregistrement des données (Bowler et al., 2025). Ce n’est qu’à partir des années 2000 que l’on observe une augmentation brutale du nombre d’espèces recensées, comme le montrent la figure 2.
+Cette tendance peut être liée à l’émergence de nouvelles technologies de collecte de données (ex. plateformes participatives comme iNaturalist ou eButterfly), à une mobilisation accrue des citoyens scientifiques, ainsi qu’à une meilleure accessibilité des outils d’identification. Ces facteurs peuvent conduire à une augmentation apparente de la richesse spécifique, sans nécessairement refléter une transformation écologique réelle des communautés (Bowler et al., 2025).
 
--->
+Même si cette figure ne montre pas directement les variations spatiales, la montée récente de la richesse spécifique pourrait aussi être le reflet d’un élargissement spatial des efforts de surveillance. L'intégration de nouveaux sites ou régions dans les bases de données pourrait contribuer à accroître artificiellement la richesse observée à l’échelle régionale.
 
-Supporting Information (SI) {#supporting-information-si .unnumbered}
----------------------------
+La figure (b), centrée sur les données postérieures à l’an 2000, révèle une forte variabilité interannuelle de la richesse spécifique, avec des pics marqués autour de 2005, 2013 et 2021. Cette variabilité pourrait être liée à des fluctuations dans l’effort d’échantillonnage, mais elle pourrait aussi refléter des changements écologiques réels, notamment en lien avec les effets du changement climatique sur la phénologie et la distribution des espèces (Menéndez et al., 2006). L’augmentation progressive observée vers 2020-2021 pourrait également coïncider avec une hausse de la participation citoyenne à la collecte de données, amplifiée par des plateformes comme iNaturalist. Ces résultats soulignent l’importance de considérer les facteurs à la fois écologiques et méthodologiques lorsqu’on interprète des tendances temporelles à court terme. 
+
+Enfin, l’analyse temporelle longue permet de constater que la structure des communautés n’est pas stable dans le temps, et qu’elle est soumise à de multiples pressions, à la fois écologiques et méthodologiques. Ces observations rappellent l'importance d’interpréter avec prudence les tendances en biodiversité, surtout lorsque les données proviennent de sources hétérogènes ou de périodes très contrastées en termes d'effort d'observation (Bowler et al., 2025).
 
 
-The main text of the paper must stand on its own without the SI. Refer
-to SI in the manuscript at an appropriate point in the text. Number
-supporting figures and tables starting with S1, S2, etc. Authors are
-limited to no more than 10 SI files, not including movie files. Authors
-who place detailed materials and methods in SI must provide sufficient
-detail in the main text methods to enable a reader to follow the logic
-of the procedures and results and also must reference the online
-methods. If a paper is fundamentally a study of a new method or
-technique, then the methods must be described completely in the main
-text. Because PNAS edits SI and composes it into a single PDF, authors
-must provide the following file formats only.
 
-### SI Text {#si-text .unnumbered}
+Discussion Figure 2 :
 
-Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a
-PDF with the same file name for visual reference).
+La carte de la richesse spécifique des lépidoptères au Québec illustre de façon marquée les variations spatiales dans la composition des communautés. On remarque une très forte concentration de la richesse spécifique dans le sud de la province. Ces zones coïncident largement avec les régions les plus densément peuplées, les plus facilement accessibles et les plus transformées par l'activité humaine (Institut de la statistique du Québec, 2021). En revanche, la richesse spécifique diminue de manière marquée en remontant vers le nord.
 
-### SI Figures {#si-figures .unnumbered}
+Plusieurs facteurs peuvent expliquer cette hétérogénéité. Sur le plan écologique, les gradients de latitude, d’altitude et de climat influencent la diversité des espèces : les milieux plus chauds et plus diversifiés du sud offrent des conditions favorables à une plus grande variété de lépidoptères (White et Kerr, 2006). De plus, les régions du sud du Québec abritent une mosaïque d’habitats (zones agricoles, forêts mixtes, milieux humides) propices à l’établissement d’un plus grand nombre d’espèces.
 
-Provide a brief legend for each supporting figure after the supporting
-text. Provide figure images in TIFF, EPS, high-resolution PDF, JPEG, or
-GIF format; figures may not be embedded in manuscript text. When saving
-TIFF files, use only LZW compression; do not use JPEG compression. Do
-not save figure numbers, legends, or author names as part of the image.
-Composite figures must be pre-assembled.
+Cette variation spatiale entraîne des structures de communautés très contrastées entre les régions : dans le sud, la compétition entre espèces peut être plus intense, avec des dynamiques de partage de niche et de spécialisation plus complexes. À l’inverse, dans le nord, les communautés sont probablement dominées par un nombre restreint d’espèces généralistes, capables de tolérer des conditions plus rudes et de coloniser des habitats plus homogènes.
 
-### 3D Figures {#d-figures .unnumbered}
-
-Supply a composable U3D or PRC file so that it may be edited and
-composed. Authors may submit a PDF file but please note it will be
-published in raw format and will not be edited or composed.
-
-### SI Tables {#si-tables .unnumbered}
-
-Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a
-PDF with the same file name for visual reference); include only one
-table per file. Do not use tabs or spaces to separate columns in Word
-tables.
-
-### SI Datasets {#si-datasets .unnumbered}
-
-Supply Excel (.xls), RTF, or PDF files. This file type will be published
-in raw format and will not be edited or composed.
-
-### SI Movies {#si-movies .unnumbered}
-
-Supply Audio Video Interleave (avi), Quicktime (mov), Windows Media
-(wmv), animated GIF (gif), or MPEG files and submit a brief legend for
-each movie in a Word or RTF file. All movies should be submitted at the
-desired reproduction size and length. Movies should be no more than 10
-MB in size.
-
-### Still images {#still-images .unnumbered}
-
-Authors must provide a still image from each video file. Supply TIFF,
-EPS, high-resolution PDF, JPEG, or GIF files.
-
-### Appendices {#appendices .unnumbered}
-
-PNAS prefers that authors submit individual source files to ensure
-readability. If this is not possible, supply a single PDF file that
-contains all of the SI associated with the paper. This file type will be
-published in raw format and will not be edited or composed.
+Il faut cependant souligner que cette carte peut aussi refléter des biais d’échantillonnage. Les zones plus accessibles ont historiquement été davantage échantillonnées, ce qui peut amplifier artificiellement la richesse apparente dans le sud. Il est donc important d’interpréter ces résultats avec prudence et de compléter les analyses avec des données d’effort d’échantillonnage si disponibles.
+En somme, la variation spatiale influence profondément la structure des communautés de lépidoptères au Québec, en déterminant à la fois la richesse spécifique, la composition des espèces et les interactions écologiques entre elles.
 
 
-<!-- Leave these lines as they are at the end of your .Rmd file to ensure placement of methods & acknowledgements sections before the references-->
-\showmatmethods
-\showacknow
-\pnasbreak
+
+Discussion figure 3 : 
+
+La figure 3 met en évidence la variabilité temporelle de la présence des espèces de lépidoptères les plus observées au cours de l’année. Cette diversité dans les dates d’arrivée et de départ suggère une niche temporelle propre à chaque espèce, réduisant potentiellement la compétition interspécifique pour les ressources (Ziv et Smallwood, 2000). Certaines espèces, comme Plodia interpunctella, sont actives dès le mois de janvier, alors que d'autres, telles que Acleris maccana, n’apparaissent qu’en juin.
+
+On remarque également une forte variabilité dans la durée de présence, allant de 127 jours pour certaines espèces à 243 jours pour Coleotechnites thujaella. Cette disparité reflète probablement des différences dans les stratégies de vie, les tolérances climatiques et les cycles biologiques. En effet, la température est un facteur crucial pour les ectothermes. Chez les insectes, comme les lépidoptères, qui, par leur durée de développement généralement courte, vont avoir plusieurs générations au cours de la saison, chacune soumise à des conditions climatiques différentes (Gibert, 2012). Avec une hausse de la température, les espèces moins plastiques, vont plutôt changer leur aire de répartition en colonisant ou en abandonnant des habitats qui sont devenus favorables ou défavorables. Tandis que les espèces à longue durée de présence vont plutôt répondre à ces changements en modifiant la phénologie de leur cycle de vie ou bien par une adaptation au milieu par plasticité phénotypique. Ces différentes techniques dépendront de l’importance du changement, l’échelle de temps considéré et les traits d’histoire de vie des organismes (Gibert, 2012).
+
+Les espèces présentent sur une longue durée pourraient alors jouer un rôle structurant plus constant dans la communauté, alors que les espèces plus éphémères pourraient avoir un impact plus ponctuel mais important durant leur pic d’abondance.
+Les variations temporelles illustrées influencent donc directement la structure des communautés, en affectant les interactions écologiques (comme la compétition, la prédation ou la pollinisation) et en modulant la diversité observée au fil des saisons.
+
+
+
+conclusion {.unnumbered}
+========================================
+
+À la lumière des résultats obtenus, il est clair que les variations spatiales et temporelles au fil des générations influencent la structure des communautés de lépidoptères, en modifiant la dynamique de concentration en richesse spécifique dans les différentes régions du Québec ainsi que le temps de présence des espèces durant une année. Ces variations s’expliquent majoritairement par les pressions écologiques et environnementales, mais aussi par les fluctuations ou le manque d’effort d’échantillonnage lors de la collecte de données par les chercheurs. Il demeure que la réalité actuelle ne peut être ignorée : les hausses de température, l’urbanisation croissante et la destruction des habitats exigent une adaptation rapide des espèces (Gibert, 2012). Mais, seront-elles capables de s’adapter à temps? 
+
+
+#Référence
+
+

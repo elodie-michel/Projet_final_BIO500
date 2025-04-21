@@ -1,4 +1,5 @@
 name|type|parent|branches|progress
+<<<<<<< HEAD
 quebec|stem|quebec|0|skipped
 dossier|stem|dossier|0|skipped
 g_b_brut|stem|g_b_brut|0|skipped
@@ -11,3 +12,10 @@ table_droits|stem|table_droits|0|skipped
 base_sqlite|stem|base_sqlite|0|skipped
 fig_phenologie|stem|fig_phenologie|0|dispatched
 fig_phenologie|stem|fig_phenologie|0|completed
+=======
+quebec|stem|quebec|0|dispatched
+quebec|stem|quebec|0|completed
+dossier|stem|dossier|0|skipped
+rapport|stem|rapport|0|dispatched
+rapport|stem|rapport|0|errored
+>>>>>>> d18d7151cf08829eefbe0607a92e877b33c8b58b

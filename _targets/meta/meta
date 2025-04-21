@@ -1,0 +1,22 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+quebec|stem|96f433e2c7feeb3c|b110f40b63fe9f9a|2c530c1562a7fbd1|-224390329||t20199.6750959163s|s441229b|441229|rds|local|vector|||2.07|le package dplyr a été compilé avec la version R 4.2.3. le package RSQLite a été compilé avec la version R 4.2.3. le package data.table a été compilé avec la version R 4.2.3. le package sf a été compilé avec la version R 4.2.3. le package ggplot2 a été compilé avec la version R 4.2.3|
+dossier|stem|5d89b7b218bcc406|6bf7cea6baaa8dcb|2c530c1562a7fbd1|171394814|lepidopteres/donnees|t20199.5986365634s|s32768b|32768|file|local|vector|||1.89|le package dplyr a été compilé avec la version R 4.2.3. le package RSQLite a été compilé avec la version R 4.2.3. le package data.table a été compilé avec la version R 4.2.3. le package sf a été compilé avec la version R 4.2.3. le package ggplot2 a été compilé avec la version R 4.2.3|
+g_b_brut|stem|41d779c43f5936be|cdb17769d4aed64a|3cab54bea4841363|-833009999||t20199.6773120821s|s5909275b|5909275|rds|local|vector|||6.22|NAs introduits lors de la conversion automatique. NAs introduits lors de la conversion automatique|
+g_b_nettoye|stem|926c3bcccd9028b1|c13280b29155155b|76c627e09efd0a83|1306780994||t20199.6776415501s|s5186171b|5186171|rds|local|vector|||5.47||
+g_b_final|stem|6a1befc76aba0295|7085b0059a15f51c|79f2eb535bb578fc|-977794336||t20199.6781296396s|s5271354b|5271354|rds|local|vector|||20.25|There were 2 warnings in stopifnot.The first warning wasℹ In argument lengths.predicatex, y, ...  0.Caused by warning in st_is_longlat bounding box has potentially an invalid value range for longlat dataℹ Run dplyrlast_dplyr_warnings to see the 1 remaining warning.. There was 1 warning in stopifnot.ℹ In argument time_obs  hmstime_obs.Caused by warning in .parse_hms Some strings failed to parse|
+table_g_b|stem|1abf587122eed842|2355f080e9a89b18|89902cf031741507|-1980607814||t20199.6785969535s|s3406967b|3406967|rds|local|vector|||1||
+table_obs|stem|e8ef6d8cc317ee31|94f1d82e0ff46e2f|568f8e88802dae49|-1878288736||t20199.6788607221s|s2493410b|2493410|rds|local|vector|||0||
+table_temps|stem|18ac94b079cc9c5b|888f5d2bb12c4068|568f8e88802dae49|-1749683326||t20199.6792457572s|s905807b|905807|rds|local|vector|||0||
+table_droits|stem|87c8462ba94103ca|3280f1f3313f7481|568f8e88802dae49|428579802||t20199.6796131633s|s2924b|2924|rds|local|vector|||0||
+base_sqlite|stem|bfe645724be9617d|3549dea580ee8b3d|f753ac525fed5293|1503412467|lepidopteres.db|t20199.6813206158s|s15446016b|15446016|file|local|vector|||3.76||
+fig_richesse_temporelle|stem|79be6e967c5c626c|3a8a17049588975a|36043f7160d12dae|543854728|lepidopteres/figures/richesse_temporelle.png|t20199.6818447854s|s19639b|19639|file|local|vector|||0.59||
+fig_richesse_spatiale|stem|f9dc99d508e7ec74|6ba24bdd30b1dda8|93aaf8d9f3b75b7e|646528546|lepidopteres/figures/richesse_spatiale.png|t20199.6821296262s|s118072b|118072|file|local|vector|||3.38||
+traiter_donnees|function|89fc6c188b05c642
+figure_richesse_temporelle|function|bbc541a4630439f4
+figure_richesse_spatiale|function|5aec06b2d96641f7
+creer_base_de_donnees_SQL|function|d94ecdd3b08c7333
+figure_phenologie|function|f567306aaf8ef293
+test_erreurs|function|f31de0a3e0582125
+creer_tables|function|392705fd96cf0aa0
+nettoyer_les_donnees|function|a691bec212f14c91
+fig_phenologie|stem|66d0b7bc65df1f8d|030d1eda9421e23f|76271b000fdfbc81|-554593398|lepidopteres/figures/phenologie.png|t20199.6824951468s|s205956b|205956|file|local|vector|||5.36|Use of summary_dataend_date is discouraged.ℹ Use end_date instead.|

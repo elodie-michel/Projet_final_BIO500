@@ -14,7 +14,7 @@ list(
   ),
   tar_target(
     name = dossier,
-    command = ".lepidopteres/donnees",
+    command = "lepidopteres/donnees",
     format = "file"
   ),
   tar_target(
@@ -48,8 +48,8 @@ list(
   tar_target(
     name = base_sqlite,
     command = {
-      creer_base_de_donnees_SQL("lepidopteres/lepidopteres.db", table_obs, table_temps, table_droits)
-      "lepidopteres/lepidopteres.db"  # renvoie le fichier créé
+      creer_base_de_donnees_SQL("lepidopteres.db", table_obs, table_temps, table_droits)
+      "lepidopteres.db"  # renvoie le fichier créé
     },
     format = "file"
   )
@@ -71,7 +71,7 @@ list(
   ),
   tar_render(
     name = rapport,
-    path = "rapport/rapport_final_BIO500/rapport_final_BIO500.Rmd",  # Mon fichier RMarkdown
+    path = "lepidopteres/rapport/rapport_final_BIO500/rapport_final_BIO500.Rmd",  # Mon fichier RMarkdown
     output_file = "rapport_final.html",  # Facultatif : nom de sortie
     output_dir = "rapport"  # Facultatif : dossier de sortie
   )

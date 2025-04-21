@@ -31,7 +31,7 @@ creer_tables <- function(base_de_donnees) {
   # Fonction pour créer une table temporelle
   creer_table_2 <- function(base_donnees) {
     base_donnees %>%
-      select(id_obs, dwc_event_date, year_obs, day_obs, time_obs)
+      select(id_obs, dwc_event_date, year_obs, day_obs)
   }
   table_temps <- creer_table_2(base_de_donnees)
   

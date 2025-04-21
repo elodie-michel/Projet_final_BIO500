@@ -1,15 +1,19 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+quebec|stem|64933c1f3cfba37f|9d37bc956d3bda4e|2c530c1562a7fbd1|-224390329||t20196.0960626503s|s441230b|441230|rds|local|vector|||1.334||
+dossier|stem|a00a57114ff4b578|7f598edc119dce1e|2c530c1562a7fbd1|171394814|./donnees|t20196.0591112105s|s5120b|5120|file|local|vector|||1.152||
+g_b_brut|stem|6bdc0837fe6b269f|cdb17769d4aed64a|9fabe53f35ad56b2|-833009999||t20196.0975477581s|s5909275b|5909275|rds|local|vector|||4.019|NAs introduced by coercion. NAs introduced by coercion|
+g_b_nettoye|stem|8d06383f6ff80e83|c13280b29155155b|64449bc539ffe495|1306780994||t20196.0982810405s|s5186171b|5186171|rds|local|vector|||2.778||
+g_b_final|stem|a24341af01656731|7085b0059a15f51c|4931313562d46fc3|-977794336||t20196.099129534s|s5271354b|5271354|rds|local|vector|||40.591|There was 1 warning in stopifnot.ℹ In argument ....Caused by warning in st_is_longlat bounding box has potentially an invalid value range for longlat data. There was 1 warning in stopifnot.ℹ In argument time_obs  hmstime_obs.Caused by warning in .parse_hms Some strings failed to parse|
+table_g_b|stem|6a9ccb4b62f59efd|2355f080e9a89b18|be2f16d8a191be1e|-1980607814||t20196.1070021763s|s3406968b|3406968|rds|local|vector|||0.536||
+table_obs|stem|ee6161f14f3129da|94f1d82e0ff46e2f|0cd62eee95b18006|-1878288736||t20196.1077778565s|s2493411b|2493411|rds|local|vector|||0.001||
+table_temps|stem|c2c6c02f0c0d007a|888f5d2bb12c4068|0cd62eee95b18006|-1749683326||t20196.108111096s|s905808b|905808|rds|local|vector|||0||
+table_droits|stem|1e34babd169f4e82|3280f1f3313f7481|0cd62eee95b18006|428579802||t20196.1083135464s|s2924b|2924|rds|local|vector|||0||
 traiter_donnees|function|89fc6c188b05c642
-creer_base_de_donnees_SQL|function|ca26fc03cb3ad85a
-test_erreurs|function|67a100120d8c38b6
-creer_tables|function|9f4ffe28eae62f42
+figure_richesse_temporelle|function|403aaf569de38435
+figure_richesse_spatiale|function|faadeef9d53eca17
+creer_base_de_donnees_SQL|function|9c6e02c488a7f23a
+figure_phenologie|function|ba6932dc469d1bfd
+test_erreurs|function|f31de0a3e0582125
+creer_tables|function|392705fd96cf0aa0
 nettoyer_les_donnees|function|f094bb052414a480
-dossier|stem|7b21586542958755|7f598edc119dce1e|2c530c1562a7fbd1|171394814|./donnees|t20195.6518060281s|s102541706b|102541706|file|local|vector|||1.47|package dplyr was built under R version 4.3.3. package RSQLite was built under R version 4.3.3. package lubridate was built under R version 4.3.3|
-g_b_brut|stem|a7a83f737a400eab|cdb17769d4aed64a|12d8ce85a0204e1a|-833009999||t20195.6908985862s|s5909274b|5909274|rds|local|vector|||13.47|NAs introduced by coercion. NAs introduced by coercion|
-g_b_nettoye|stem|a2f0bcabe637e7d5|c13280b29155155b|4a65fbbfc0328a51|1306780994||t20195.6910712109s|s5186165b|5186165|rds|local|vector|||9.91||
-g_b_final|stem|ebf0a53b8d543972|d418c82c35200fe3|2c32d0d62b0cf013|-977794336||t20195.6913745165s|s5340426b|5340426|rds|local|vector|||21.09|There was 1 warning in mutate.ℹ In argument time_obs  hmstime_obs.Caused by warning in .parse_hms Some strings failed to parse|
-table_g_b|stem|c47171741d0133c7|2355f080e9a89b18|1c68a4e72d6c44f4|-1980607814||t20195.6913929736s|s3284338b|3284338|rds|local|vector|||0.47||
-table_temps|stem|ae103b750e0e765c|888f5d2bb12c4068|043681dcf87c260f|-1749683326||t20195.6913999958s|s1172283b|1172283|rds|local|vector|||0||
-table_obs|stem|b39e9eb245bc6c93|94f1d82e0ff46e2f|043681dcf87c260f|-1878288736||t20195.691407073s|s2107616b|2107616|rds|local|vector|||0||
-table_droits|stem|6d29a0816b48db80|3280f1f3313f7481|043681dcf87c260f|428579802||t20195.6914076929s|s2823b|2823|rds|local|vector|||0||
-base_sqlite|stem|a26cd15f0b001239|d6e16a02409a4ab1|0a2154246312069b|1503412467|lepidopteres.db|t20195.6914578111s|s32780288b|32780288|file|local|vector|||4.26||
+base_sqlite|stem||7e760c523d44ec2f|ac0f54d879041bbd|1503412467|lepidopteres.db|t20196.1086910337s||0|file|local|vector|||0.027||Could not connect to databaseunable to open database file

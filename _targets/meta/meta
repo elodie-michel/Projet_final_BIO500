@@ -1,26 +1,23 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-figure_richesse_temporelle|function|8a7fa3fb3208807d|||||||||||||||
-quebec|stem|64933c1f3cfba37f|b110f40b63fe9f9a|2c530c1562a7fbd1|-224390329||t20200.634429532s|s441230b|441230|rds|local|vector|||1.453||
-g_b_brut|stem|6bdc0837fe6b269f|cdb17769d4aed64a|9fabe53f35ad56b2|-833009999||t20200.6345067521s|s5909275b|5909275|rds|local|vector|||3.83|NAs introduced by coercion. NAs introduced by coercion|
-g_b_nettoye|stem|8d06383f6ff80e83|c13280b29155155b|d5639e99bf003e5b|1306780994||t20200.6345663179s|s5186171b|5186171|rds|local|vector|||2.934||
-g_b_final|stem|a24341af01656731|7085b0059a15f51c|4931313562d46fc3|-977794336||t20200.6350657297s|s5271354b|5271354|rds|local|vector|||40.948|There was 1 warning in stopifnot.ℹ In argument ....Caused by warning in st_is_longlat bounding box has potentially an invalid value range for longlat data. There was 1 warning in stopifnot.ℹ In argument time_obs  hmstime_obs.Caused by warning in .parse_hms Some strings failed to parse|
-table_g_b|stem|6a9ccb4b62f59efd|2355f080e9a89b18|be2f16d8a191be1e|-1980607814||t20200.6350764265s|s3406968b|3406968|rds|local|vector|||0.233||
-table_temps|stem|c2c6c02f0c0d007a|888f5d2bb12c4068|0cd62eee95b18006|-1749683326||t20200.6350795938s|s905808b|905808|rds|local|vector|||0||
-table_obs|stem|ee6161f14f3129da|94f1d82e0ff46e2f|0cd62eee95b18006|-1878288736||t20200.6350849501s|s2493411b|2493411|rds|local|vector|||0.001||
-table_droits|stem|1e34babd169f4e82|3280f1f3313f7481|0cd62eee95b18006|428579802||t20200.6350850668s|s2924b|2924|rds|local|vector|||0||
-base_sqlite|stem|a4f24c6fb67957dd|3549dea580ee8b3d|e3beae0f09b81350|1503412467|lepidopteres.db|t20200.6350941216s|s15446016b|15446016|file|local|vector|||0.782||
-dossier|stem|a00a57114ff4b578|6bf7cea6baaa8dcb|2c530c1562a7fbd1|171394814|lepidopteres/donnees|t20200.6296512005s|s5120b|5120|file|local|vector|||0||
-fig_richesse_temporelle|stem|f79b955d677dbd29|63ce400540f61b00|cc264146e453e81d|543854728||t20200.6385762398s|s667b|667|rds|local|vector|||0.153||
-figure_richesse_spatiale|function|5aec06b2d96641f7|||||||||||||||
-fig_richesse_spatiale|stem|f74720368525944b|9c2d195b0fa022b8|5733ce0e0b8fe31e|646528546||t20200.6549885422s|s5977b|5977|rds|local|vector|||0.481||
-figure_phenologie|function|f567306aaf8ef293|||||||||||||||
-fig_phenologie|stem|82cbd6903e86a8c8|0f719886454dc64a|0e2d846cf3fe1ca7|-554593398||t20200.6627456394s|s1092982b|1092982|rds|local|vector|||0.181||
-traiter_donnees|function|89fc6c188b05c642
+traiter_donnees|function|5002d650e0cb35b6
 extraire_phenologie|function|a1a880e5cb63d8f5
 extraire_richesse_temporelle|function|0fdb9461994b0797
 creer_base_de_donnees_SQL|function|d94ecdd3b08c7333
 test_erreurs|function|f31de0a3e0582125
 extraire_richesse_spatiale|function|9a98a36da392ae55
 creer_tables|function|392705fd96cf0aa0
-nettoyer_les_donnees|function|a691bec212f14c91
-rapport|stem|6a54e0d86a367c3e|916e5b5a37ad37ec|652c38f37eb40467|-1266156412|lepidopteres/rapport/rapport_final_BIO500/rapport_final_BIO500.pdf*lepidopteres/rapport/rapport_final_BIO500/rapport_final_BIO500.Rmd*lepidopteres/rapport/rapport_final_BIO500/rapport_final_BIO500_files|t20200.7167776856s|s670900b|670900|file|local|vector|||5.413|LaTeX Warning Label figfig_richesse_temporelle multiply defined.. LaTeX Warning Label figfig_richesse_spatiale multiply defined.. LaTeX Warning Label figfig_phenologie multiply defined.. Package microtype Warning Unable to apply patch eqnum on input line 85.. LaTeX Warning There were multiplydefined labels.|
+nettoyer_les_donnees|function|c79019e1275778cd
+dossier|stem|a00a57114ff4b578|0498e442101e8fdd|2c530c1562a7fbd1|171394814|donnees|t20200.6296512185s|s115346812b|115346812|file|local|vector|||1.228||
+quebec|stem|64933c1f3cfba37f|9d37bc956d3bda4e|2c530c1562a7fbd1|-224390329||t20200.7314374847s|s441230b|441230|rds|local|vector|||0.085||
+bd_brut|stem|6bdc0837fe6b269f|cdb17769d4aed64a|8d67fc386435aa69|1815994849||t20200.7315101618s|s5909275b|5909275|rds|local|vector|||3.752|NAs introduced by coercion. NAs introduced by coercion|
+bd_nettoye|stem|8d06383f6ff80e83|bb74e69dc7eb1516|b5d64d85ea2e56ef|175388148||t20200.7315645458s|s5186171b|5186171|rds|local|vector|||2.494||
+bd_final|stem|a24341af01656731|daf2a443d2653081|d15834cc79e168a5|-638779324||t20200.732076992s|s5271354b|5271354|rds|local|vector|||42.07|There was 1 warning in stopifnot.ℹ In argument ....Caused by warning in st_is_longlat bounding box has potentially an invalid value range for longlat data. There was 1 warning in stopifnot.ℹ In argument time_obs  hmstime_obs.Caused by warning in .parse_hms Some strings failed to parse|
+table_bd|stem|6a9ccb4b62f59efd|bbacb90eea47f174|497712fc4aec2645|-1671821384||t20200.7320875452s|s3406968b|3406968|rds|local|vector|||0.212||
+table_temps|stem|c2c6c02f0c0d007a|1ae3876c342e5b8b|5c8b6b46a1301498|-1749683326||t20200.7320907146s|s905808b|905808|rds|local|vector|||0.001||
+table_obs|stem|ee6161f14f3129da|64c2a6a307c29033|5c8b6b46a1301498|-1878288736||t20200.7320957006s|s2493411b|2493411|rds|local|vector|||0||
+table_droits|stem|1e34babd169f4e82|893c1bdeadf1a4b1|5c8b6b46a1301498|428579802||t20200.7320958342s|s2924b|2924|rds|local|vector|||0||
+base_sqlite|stem|709029726321caf0|3549dea580ee8b3d|e3beae0f09b81350|1503412467|lepidopteres.db|t20200.7321071013s|s15446016b|15446016|file|local|vector|||0.972||
+fig_phenologie|stem|82cbd6903e86a8c8|0f719886454dc64a|59ce7a43109aab37|-554593398||t20200.7321135028s|s1092982b|1092982|rds|local|vector|||0.185||
+fig_richesse_spatiale|stem|f74720368525944b|9c2d195b0fa022b8|72416bcdd270fa67|646528546||t20200.7321192467s|s5977b|5977|rds|local|vector|||0.488||
+fig_richesse_temporelle|stem|f79b955d677dbd29|63ce400540f61b00|dc3e2f838cf75d9a|543854728||t20200.7321210776s|s667b|667|rds|local|vector|||0.153||
+rapport|stem|e3fafc171cd19fc8|2b66b77a80a6b991|652c38f37eb40467|-1266156412|rapport_final_BIO500/rapport_final_BIO500.pdf*rapport_final_BIO500/rapport_final_BIO500.Rmd*rapport_final_BIO500/rapport_final_BIO500_files|t20200.7321980833s|s670904b|670904|file|local|vector|||6.671|LaTeX Warning Label figfig_richesse_temporelle multiply defined.. LaTeX Warning Label figfig_richesse_spatiale multiply defined.. LaTeX Warning Label figfig_phenologie multiply defined.. Package microtype Warning Unable to apply patch eqnum on input line 85.. LaTeX Warning There were multiplydefined labels.|

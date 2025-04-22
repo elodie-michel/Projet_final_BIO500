@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.21)  22 APR 2025 13:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.21)  22 APR 2025 13:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -940,6 +940,9 @@ LaTeX Warning: Label `fig:fig_richesse_temporelle' multiply defined.
 
 LaTeX Warning: Label `fig:fig_richesse_spatiale' multiply defined.
 
+
+LaTeX Warning: Label `fig:fig_phenologie' multiply defined.
+
 )
 \openout1 = `rapport_final_BIO500.aux'.
 
@@ -1132,32 +1135,32 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 5.69998pt on input line 164.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 4.74998pt on input line 164.
-<rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf, id=34, 469.755pt x 433.62pt>
+<rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf, id=38, 469.755pt x 433.62pt>
 File: rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf Graphic file (type pdf)
 <use rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf>
-Package pdftex.def Info: rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf  used on input line 188.
+Package pdftex.def Info: rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf  used on input line 189.
 (pdftex.def)             Requested size: 196.87823pt x 181.72878pt.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.64998pt on input line 192.
+(Font)              scaled to size 6.64998pt on input line 193.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 194.
+(Font)              <7> on input line 195.
 [1{/Users/elo-m/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/elo-m/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/elo-m/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-<rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf, id=46, 469.755pt x 325.215pt>
+<rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf, id=50, 469.755pt x 325.215pt>
 File: rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf Graphic file (type pdf)
 <use rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf>
-Package pdftex.def Info: rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf  used on input line 238.
+Package pdftex.def Info: rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf  used on input line 240.
 (pdftex.def)             Requested size: 172.26704pt x 119.26074pt.
 
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 283.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 286.
 (/Users/elo-m/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1166,17 +1169,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (27.9526pt too wide) in paragraph at lines 286--286
+Overfull \hbox (27.9526pt too wide) in paragraph at lines 289--289
 []\T1/lmtt/m/n/9 ## Warning: Use of `summary_data$end_date` is discouraged.[] 
  []
 
-<rapport_final_BIO500_files/figure-latex/fig:fig_phenologie-1.pdf, id=47, 650.43pt x 578.16pt>
-File: rapport_final_BIO500_files/figure-latex/fig:fig_phenologie-1.pdf Graphic file (type pdf)
-<use rapport_final_BIO500_files/figure-latex/fig:fig_phenologie-1.pdf>
-Package pdftex.def Info: rapport_final_BIO500_files/figure-latex/fig:fig_phenologie-1.pdf  used on input line 290.
+<rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf, id=51, 650.43pt x 578.16pt>
+File: rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf Graphic file (type pdf)
+<use rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf>
+Package pdftex.def Info: rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf  used on input line 293.
 (pdftex.def)             Requested size: 196.87823pt x 175.002pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4048) has occurred while \output is active []
 
 
 
@@ -1184,7 +1187,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[3 <./rapport_final_BIO500_files/figure-latex/fig:fig_phenologie-1.pdf>] 
+[3 <./rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf>] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./rapport_final_BIO500.aux)
  ***********
@@ -1195,21 +1198,21 @@ L3 programming layer <2025-03-26>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `rapport_final_BIO500.out' has not changed.
-(rerunfilecheck)             Checksum: 60DF39FBA63C261BAFD5F4A2E46FC817;938.
+(rerunfilecheck)             Checksum: ACE47659EA603964A5A2DC3F238367DA;1258.
  ) 
 Here is how much of TeX's memory you used:
- 30465 strings out of 471546
- 568695 string characters out of 5518665
- 984939 words of memory out of 5000000
- 56263 multiletter control sequences out of 15000+600000
- 693375 words of font info for 178 fonts, out of 8000000 for 9000
+ 30464 strings out of 471546
+ 568697 string characters out of 5518665
+ 984766 words of memory out of 5000000
+ 56264 multiletter control sequences out of 15000+600000
+ 693286 words of font info for 177 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  117i,14n,121p,1017b,1116s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/elo-m/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/elo-m/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb></Users/elo-m/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></Users/elo-m/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></Users/elo-m/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></Users/elo-m/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on rapport_final_BIO500.pdf (3 pages, 396131 bytes).
+Output written on rapport_final_BIO500.pdf (3 pages, 395653 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
+ 138 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
  15 named destinations out of 1000 (max. 500000)
- 48732 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 48740 words of extra memory for PDF output out of 51595 (max. 10000000)
 

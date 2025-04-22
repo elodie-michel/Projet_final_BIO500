@@ -168,13 +168,37 @@ reproductibles.
 \section*{Discussion figure 1}\label{discussion-figure-1}
 \addcontentsline{toc}{section}{Discussion figure 1}
 
-\{r fig.richesse, echo=FALSE, out.width=``0.9\textbackslash linewidth'',
-fig.cap=``Richesse spécifique selon le temps''\} fig\_rich \textless-
-tar\_read(figure\_richesse) knitr::include\_graphics(fig\_rich)
+\begin{figure}
 
-\{r phenologie, echo=FALSE, fig.cap=``Phénologie des espèces les plus
-observées'', out.width=`100\%'\} fig\_pheno \textless-
-tar\_read(figure\_phenologie) knitr::include\_graphics(fig\_pheno)
+{\centering \includegraphics[width=0.7\linewidth]{rapport_final_BIO500_files/figure-latex/fig:fig_richesse_temporelle-1} 
+
+}
+
+\caption{\label{fig:fig_richesse_temporelle}Richesse spécifique au fil des années.}\label{fig:fig:fig_richesse_temporelle}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{rapport_final_BIO500_files/figure-latex/fig:fig_richesse_spatiale-1} 
+
+}
+
+\caption{\label{fig:fig_richesse_spatiale}Richesse spatiale }\label{fig:fig:fig_richesse_spatiale}
+\end{figure}
+
+\begin{verbatim}
+## Warning: Use of `summary_data$end_date` is discouraged.
+## i Use `end_date` instead.
+\end{verbatim}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{rapport_final_BIO500_files/figure-latex/fig:fig_phenologie-1} 
+
+}
+
+\caption{\label{fig:fig_phenologie}Phénologie}\label{fig:fig:fig_phenologie}
+\end{figure}
 
 La richesse spécifique observée à travers le temps révèle une dynamique
 marquée par une accélération récente. Pendant plus d'un siècle, la

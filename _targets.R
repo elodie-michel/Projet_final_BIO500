@@ -56,24 +56,19 @@ list(
   ,
   tar_target(
     name = fig_richesse_temporelle,
-    command = figure_richesse_temporelle(base_sqlite),
-    format = "file"
+    command = extraire_richesse_temporelle(base_sqlite)
   ),
   tar_target(
     name = fig_richesse_spatiale,
-    command = figure_richesse_spatiale(base_sqlite, quebec),
-    format = "file"
+    command = extraire_richesse_spatiale(base_sqlite)
   ),
   tar_target(
     name = fig_phenologie,
-    command = figure_phenologie(base_sqlite, 10),
-    format = "file"
+    command = extraire_phenologie(base_sqlite, 10)
   ),
   tar_render(
     name = rapport,
     path = "lepidopteres/rapport/rapport_final_BIO500/rapport_final_BIO500.Rmd",  # Mon fichier RMarkdown
-    output_file = "rapport_final.html",  # Facultatif : nom de sortie
-    output_dir = "rapport"  # Facultatif : dossier de sortie
   )
 )
 

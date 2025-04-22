@@ -137,27 +137,24 @@ géographiques (latitude et longitude), l'heure, le jour et l'année
 d'observation ainsi que tous les droits d'auteur, comprenant le
 créateur, le titre, les licences, la source originale et le publicateur.
 Cette dernière comprenant environ 441 891 observations et ce, sur un
-intervalle de données allant de 1859 à 2023.
-
-Afin de pouvoir utiliser cette base de données, nous avons procédé à une
-revalidation en éliminant et triant les lacunes humaines potentielles
-dans l'enregistrement des données à l'aide du logiciel R studio. Une
-variété de tests a été exécuté pour parvenir à l'obtention de données
-valides et d'une reproductibilité dans nos résultats. Des erreurs non
-négligeables, comme des NA non-expliquer, des échantillons répétés, des
-valeurs irréels dans les dates, les années, les heures et même les
-coordonnées, devant être filtrer pour être des points seulement au
-Québec, ont été corrigés et l'identification des bons types par colonnes
-ont été modifiés.
-
-Ensuite, une fois la base de données considérée comme valide, nous avons
-pu procéder à la création de tables, avec l'aide du langage informatique
-SQL, en regroupant les colonnes pertinentes ensembles, créer les liens
-entre ces dernières et ainsi optimiser l'analyse de nos données. En
-faisant des requêtes dans nos différentes tables, nous avons alors été
-en mesure de créer des figures nous aidant à répondre à notre question
-de départ. Finalement, une fois tous nos manipulations insérées dans des
-scripts différents dans le logiciel R, nous avons procédé à
+intervalle de données allant de 1859 à 2023. Afin de pouvoir utiliser
+cette base de données, nous avons procédé à une revalidation en
+éliminant et triant les lacunes humaines potentielles dans
+l'enregistrement des données à l'aide du logiciel R studio. Une variété
+de tests a été exécuté pour parvenir à l'obtention de données valides et
+d'une reproductibilité dans nos résultats. Des erreurs non négligeables,
+comme des NA non-expliquer, des échantillons répétés, des valeurs
+irréels dans les dates, les années, les heures et même les coordonnées,
+devant être filtrer pour être des points seulement au Québec, ont été
+corrigés et l'identification des bons types par colonnes ont été
+modifiés. Ensuite, une fois la base de données considérée comme valide,
+nous avons pu procéder à la création de tables, avec l'aide du langage
+informatique SQL, en regroupant les colonnes pertinentes ensembles,
+créer les liens entre ces dernières et ainsi optimiser l'analyse de nos
+données. En faisant des requêtes dans nos différentes tables, nous avons
+alors été en mesure de créer des figures nous aidant à répondre à notre
+question de départ. Finalement, une fois tous nos manipulations insérées
+dans des scripts différents dans le logiciel R, nous avons procédé à
 l'automatisation de notre code à l'aide du package Target et ainsi créer
 une chaîne de traitement permettant à nos résultats d'être
 reproductibles.
@@ -199,10 +196,9 @@ pas directement les variations spatiales, la montée récente de la
 richesse spécifique pourrait aussi être le reflet d'un élargissement
 spatial des efforts de surveillance. L'intégration de nouveaux sites ou
 régions dans les bases de données pourrait contribuer à accroître
-artificiellement la richesse observée à l'échelle régionale.
-
-La \textbf{Figure \ref{fig:fig_richesse_temporelle}} (b), centrée sur
-les données postérieures à l'an 2000, révèle une forte variabilité
+artificiellement la richesse observée à l'échelle régionale. La
+\textbf{Figure \ref{fig:fig_richesse_temporelle}} (b), centrée sur les
+données postérieures à l'an 2000, révèle une forte variabilité
 interannuelle de la richesse spécifique, avec des pics marqués autour de
 2005, 2013 et 2021. Cette variabilité pourrait être liée à des
 fluctuations dans l'effort d'échantillonnage, mais elle pourrait aussi
@@ -213,11 +209,10 @@ vers 2020-2021 pourrait également coïncider avec une hausse de la
 participation citoyenne à la collecte de données, amplifiée par des
 plateformes comme iNaturalist. Ces résultats soulignent l'importance de
 considérer les facteurs à la fois écologiques et méthodologiques
-lorsqu'on interprète des tendances temporelles à court terme.
-
-Enfin, l'analyse temporelle longue permet de constater que la structure
-des communautés n'est pas stable dans le temps, et qu'elle est soumise à
-de multiples pressions, à la fois écologiques et méthodologiques. Ces
+lorsqu'on interprète des tendances temporelles à court terme. Enfin,
+l'analyse temporelle longue permet de constater que la structure des
+communautés n'est pas stable dans le temps, et qu'elle est soumise à de
+multiples pressions, à la fois écologiques et méthodologiques. Ces
 observations rappellent l'importance d'interpréter avec prudence les
 tendances en biodiversité, surtout lorsque les données proviennent de
 sources hétérogènes ou de périodes très contrastées en termes d'effort
@@ -253,19 +248,16 @@ diversifiés du sud offrent des conditions favorables à une plus grande
 variété de lépidoptères (White et Kerr, 2006). De plus, les régions du
 sud du Québec abritent une mosaïque d'habitats (zones agricoles, forêts
 mixtes, milieux humides) propices à l'établissement d'un plus grand
-nombre d'espèces.
-
-Cette variation spatiale entraîne des structures de communautés très
-contrastées entre les régions : dans le sud, la compétition entre
-espèces peut être plus intense, avec des dynamiques de partage de niche
-et de spécialisation plus complexes. À l'inverse, dans le nord, les
-communautés sont probablement dominées par un nombre restreint d'espèces
-généralistes, capables de tolérer des conditions plus rudes et de
-coloniser des habitats plus homogènes.
-
-Il faut cependant souligner que cette carte peut aussi refléter des
-biais d'échantillonnage. Les zones plus accessibles ont historiquement
-été davantage échantillonnées, ce qui peut amplifier artificiellement la
+nombre d'espèces. Cette variation spatiale entraîne des structures de
+communautés très contrastées entre les régions : dans le sud, la
+compétition entre espèces peut être plus intense, avec des dynamiques de
+partage de niche et de spécialisation plus complexes. À l'inverse, dans
+le nord, les communautés sont probablement dominées par un nombre
+restreint d'espèces généralistes, capables de tolérer des conditions
+plus rudes et de coloniser des habitats plus homogènes. Il faut
+cependant souligner que cette carte peut aussi refléter des biais
+d'échantillonnage. Les zones plus accessibles ont historiquement été
+davantage échantillonnées, ce qui peut amplifier artificiellement la
 richesse apparente dans le sud. Il est donc important d'interpréter ces
 résultats avec prudence et de compléter les analyses avec des données
 d'effort d'échantillonnage si disponibles. En somme, la variation
@@ -284,11 +276,6 @@ potentiellement la compétition interspécifique pour les ressources (Ziv
 et Smallwood, 2000). Certaines espèces, comme Plodia interpunctella,
 sont actives dès le mois de janvier, alors que d'autres, telles que
 Acleris maccana, n'apparaissent qu'en juin.
-
-\begin{verbatim}
-## Warning: Use of `summary_data$end_date` is discouraged.
-## i Use `end_date` instead.
-\end{verbatim}
 
 \begin{figure}[H]
 
@@ -315,15 +302,14 @@ durée de présence vont plutôt répondre à ces changements en modifiant la
 phénologie de leur cycle de vie ou bien par une adaptation au milieu par
 plasticité phénotypique. Ces différentes techniques dépendront de
 l'importance du changement, l'échelle de temps considéré et les traits
-d'histoire de vie des organismes (Gibert, 2012).
-
-Les espèces présentent sur une longue durée pourraient alors jouer un
-rôle structurant plus constant dans la communauté, alors que les espèces
-plus éphémères pourraient avoir un impact plus ponctuel mais important
-durant leur pic d'abondance. Les variations temporelles illustrées
-influencent donc directement la structure des communautés, en affectant
-les interactions écologiques (comme la compétition, la prédation ou la
-pollinisation) et en modulant la diversité observée au fil des saisons.
+d'histoire de vie des organismes (Gibert, 2012). Les espèces présentent
+sur une longue durée pourraient alors jouer un rôle structurant plus
+constant dans la communauté, alors que les espèces plus éphémères
+pourraient avoir un impact plus ponctuel mais important durant leur pic
+d'abondance. Les variations temporelles illustrées influencent donc
+directement la structure des communautés, en affectant les interactions
+écologiques (comme la compétition, la prédation ou la pollinisation) et
+en modulant la diversité observée au fil des saisons.
 
 \section*{Conclusion}\label{conclusion}
 \addcontentsline{toc}{section}{Conclusion}

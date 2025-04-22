@@ -46,7 +46,11 @@ Résultats & Discussion {.unnumbered}
 ========================================
 Discussion figure 1 {.unnumbered}
 ========================================
-```{r fig_richesse_temporelle, echo=FALSE, fig.cap="\\label{fig:fig_richesse_temporelle}Richesse spécifique au fil des années.", fig.align='center', out.width='70%'}
+
+La richesse spécifique observée à travers le temps révèle une dynamique marquée par une accélération récente. Pendant plus d’un siècle, la richesse observée est demeurée faible et relativement constante, ce qui pourrait s’expliquer par un effort d’échantillonnage limité ou des lacunes dans l’enregistrement des données  [@bowler_treating_2025]. Ce n’est qu’à partir des années 2000 que l’on observe une augmentation brutale du nombre d’espèces recensées, comme le montrent la figure 1.
+Cette tendance peut être liée à l’émergence de nouvelles technologies de collecte de données (ex. plateformes participatives comme iNaturalist ou eButterfly), à une mobilisation accrue des citoyens scientifiques, ainsi qu’à une meilleure accessibilité des outils d’identification. Ces facteurs peuvent conduire à une augmentation apparente de la richesse spécifique, sans nécessairement refléter une transformation écologique réelle des communautés [@bowler_treating_2025].
+
+```{r fig_richesse_temporelle, echo=FALSE, fig.cap="\\label{fig:fig_richesse_temporelle}(a) Concentration en richesse spécifique des lépidoptères sur une échelle de temps comprise entre 1859 et 2023. (b) Concentration en richesse spécifique des lépidoptères sur une échelle de temps comprise entre 2000 et 2023.", fig.align='center', out.width='80%',fig.pos="H",fig.height=6}
 library(targets)
 df <- tar_read(fig_richesse_temporelle)
 
@@ -76,8 +80,19 @@ grid()
 
 ```
 
+Même si cette figure ne montre pas directement les variations spatiales, la montée récente de la richesse spécifique pourrait aussi être le reflet d’un élargissement spatial des efforts de surveillance. L'intégration de nouveaux sites ou régions dans les bases de données pourrait contribuer à accroître artificiellement la richesse observée à l’échelle régionale.
 
-```{r fig_richesse_spatiale, echo=FALSE, fig.cap="\\label{fig:fig_richesse_spatiale}Richesse spatiale ", fig.align='center', out.width='70%'}
+La figure (b), centrée sur les données postérieures à l’an 2000, révèle une forte variabilité interannuelle de la richesse spécifique, avec des pics marqués autour de 2005, 2013 et 2021. Cette variabilité pourrait être liée à des fluctuations dans l’effort d’échantillonnage, mais elle pourrait aussi refléter des changements écologiques réels, notamment en lien avec les effets du changement climatique sur la phénologie et la distribution des espèces [@menendez_species_2006]. L’augmentation progressive observée vers 2020-2021 pourrait également coïncider avec une hausse de la participation citoyenne à la collecte de données, amplifiée par des plateformes comme iNaturalist. Ces résultats soulignent l’importance de considérer les facteurs à la fois écologiques et méthodologiques lorsqu’on interprète des tendances temporelles à court terme. 
+
+Enfin, l’analyse temporelle longue permet de constater que la structure des communautés n’est pas stable dans le temps, et qu’elle est soumise à de multiples pressions, à la fois écologiques et méthodologiques. Ces observations rappellent l'importance d’interpréter avec prudence les tendances en biodiversité, surtout lorsque les données proviennent de sources hétérogènes ou de périodes très contrastées en termes d'effort d'observation [@bowler_treating_2025].
+
+
+Discussion figure 2 {.unnumbered}
+========================================
+
+La carte de la richesse spécifique des lépidoptères au Québec (Figure 2) illustre de façon marquée les variations spatiales dans la composition des communautés. On remarque une très forte concentration de la richesse spécifique dans le sud de la province. Ces zones coïncident largement avec les régions les plus densément peuplées, les plus facilement accessibles et les plus transformées par l'activité humaine  [@institut_de_la_statistique_du_quebec_bulletin_2021]. En revanche, la richesse spécifique diminue de manière marquée en remontant vers le nord.
+
+```{r fig_richesse_spatiale, echo=FALSE, fig.cap="\\label{fig:fig_richesse_spatiale}Carte du Québec représentant un gradient de concentrations en richesse spécifiques des lépidoptères, allant de 0 à 200, à la suite de l’échantillonnage sur une échelle de temps compris entre 1859 et 2023.", fig.align='center', out.width='70%',fig.pos="H"}
  
 library(dplyr)  
 library(sf)
@@ -119,11 +134,27 @@ figure2
 
 ```
 
-```{r fig:fig_phenologie, echo=FALSE, fig.cap="\\label{fig:fig_phenologie}Phénologie", fig.align='center', fig.width=12, fig.height=8}
+
+Plusieurs facteurs peuvent expliquer cette hétérogénéité. Sur le plan écologique, les gradients de latitude, d’altitude et de climat influencent la diversité des espèces : les milieux plus chauds et plus diversifiés du sud offrent des conditions favorables à une plus grande variété de lépidoptères  [@white_contrasting_2006]. De plus, les régions du sud du Québec abritent une mosaïque d’habitats (zones agricoles, forêts mixtes, milieux humides) propices à l’établissement d’un plus grand nombre d’espèces.
+
+Cette variation spatiale entraîne des structures de communautés très contrastées entre les régions : dans le sud, la compétition entre espèces peut être plus intense, avec des dynamiques de partage de niche et de spécialisation plus complexes. À l’inverse, dans le nord, les communautés sont probablement dominées par un nombre restreint d’espèces généralistes, capables de tolérer des conditions plus rudes et de coloniser des habitats plus homogènes.
+
+Il faut cependant souligner que cette carte peut aussi refléter des biais d’échantillonnage. Les zones plus accessibles ont historiquement été davantage échantillonnées, ce qui peut amplifier artificiellement la richesse apparente dans le sud. Il est donc important d’interpréter ces résultats avec prudence et de compléter les analyses avec des données d’effort d’échantillonnage si disponibles.
+En somme, la variation spatiale influence profondément la structure des communautés de lépidoptères au Québec, en déterminant à la fois la richesse spécifique, la composition des espèces et les interactions écologiques entre elles.
+
+
+
+Discussion figure 3 {.unnumbered}
+
+La figure 3 met en évidence la variabilité temporelle de la présence des espèces de lépidoptères les plus observées au cours de l’année. Cette diversité dans les dates d’arrivée et de départ suggère une niche temporelle propre à chaque espèce, réduisant potentiellement la compétition interspécifique pour les ressources [@ziv_gerbils_2000]. Certaines espèces, comme Plodia interpunctella, sont actives dès le mois de janvier, alors que d'autres, telles que Acleris maccana, n’apparaissent qu’en juin.
+
+```{r fig:fig_phenologie, echo=FALSE, fig.cap="\\label{fig:fig_phenologie}Variabilité temporelle de la présence des 10 espèces de lépidoptères les plus abondantes en comparant leurs dates d’arrivée et de départ durant une année complète.", fig.align='center',out.width='80%',fig.width=9, fig.height=8, fig.pos="H"}
 
 library(dplyr)
 library(ggplot2)
 library(lubridate)
+
+n_especes <- 10
 
 pheno <- tar_read(fig_phenologie)
 
@@ -187,42 +218,6 @@ figure_pheno
 ```
 
 
-
-La richesse spécifique observée à travers le temps révèle une dynamique marquée par une accélération récente. Pendant plus d’un siècle, la richesse observée est demeurée faible et relativement constante, ce qui pourrait s’expliquer par un effort d’échantillonnage limité ou des lacunes dans l’enregistrement des données  [@bowler_treating_2025]. Ce n’est qu’à partir des années 2000 que l’on observe une augmentation brutale du nombre d’espèces recensées, comme le montrent la figure 1.
-Cette tendance peut être liée à l’émergence de nouvelles technologies de collecte de données (ex. plateformes participatives comme iNaturalist ou eButterfly), à une mobilisation accrue des citoyens scientifiques, ainsi qu’à une meilleure accessibilité des outils d’identification. Ces facteurs peuvent conduire à une augmentation apparente de la richesse spécifique, sans nécessairement refléter une transformation écologique réelle des communautés [@bowler_treating_2025].
-
-Même si cette figure ne montre pas directement les variations spatiales, la montée récente de la richesse spécifique pourrait aussi être le reflet d’un élargissement spatial des efforts de surveillance. L'intégration de nouveaux sites ou régions dans les bases de données pourrait contribuer à accroître artificiellement la richesse observée à l’échelle régionale.
-
-La figure (b), centrée sur les données postérieures à l’an 2000, révèle une forte variabilité interannuelle de la richesse spécifique, avec des pics marqués autour de 2005, 2013 et 2021. Cette variabilité pourrait être liée à des fluctuations dans l’effort d’échantillonnage, mais elle pourrait aussi refléter des changements écologiques réels, notamment en lien avec les effets du changement climatique sur la phénologie et la distribution des espèces [@menendez_species_2006]. L’augmentation progressive observée vers 2020-2021 pourrait également coïncider avec une hausse de la participation citoyenne à la collecte de données, amplifiée par des plateformes comme iNaturalist. Ces résultats soulignent l’importance de considérer les facteurs à la fois écologiques et méthodologiques lorsqu’on interprète des tendances temporelles à court terme. 
-
-Enfin, l’analyse temporelle longue permet de constater que la structure des communautés n’est pas stable dans le temps, et qu’elle est soumise à de multiples pressions, à la fois écologiques et méthodologiques. Ces observations rappellent l'importance d’interpréter avec prudence les tendances en biodiversité, surtout lorsque les données proviennent de sources hétérogènes ou de périodes très contrastées en termes d'effort d'observation [@bowler_treating_2025].
-
-
-Discussion figure 2 {.unnumbered}
-========================================
-Mettre la figure 2
-
-
-
-La carte de la richesse spécifique des lépidoptères au Québec illustre de façon marquée les variations spatiales dans la composition des communautés. On remarque une très forte concentration de la richesse spécifique dans le sud de la province. Ces zones coïncident largement avec les régions les plus densément peuplées, les plus facilement accessibles et les plus transformées par l'activité humaine  [@institut_de_la_statistique_du_quebec_bulletin_2021]. En revanche, la richesse spécifique diminue de manière marquée en remontant vers le nord.
-
-Plusieurs facteurs peuvent expliquer cette hétérogénéité. Sur le plan écologique, les gradients de latitude, d’altitude et de climat influencent la diversité des espèces : les milieux plus chauds et plus diversifiés du sud offrent des conditions favorables à une plus grande variété de lépidoptères  [@white_contrasting_2006]. De plus, les régions du sud du Québec abritent une mosaïque d’habitats (zones agricoles, forêts mixtes, milieux humides) propices à l’établissement d’un plus grand nombre d’espèces.
-
-Cette variation spatiale entraîne des structures de communautés très contrastées entre les régions : dans le sud, la compétition entre espèces peut être plus intense, avec des dynamiques de partage de niche et de spécialisation plus complexes. À l’inverse, dans le nord, les communautés sont probablement dominées par un nombre restreint d’espèces généralistes, capables de tolérer des conditions plus rudes et de coloniser des habitats plus homogènes.
-
-Il faut cependant souligner que cette carte peut aussi refléter des biais d’échantillonnage. Les zones plus accessibles ont historiquement été davantage échantillonnées, ce qui peut amplifier artificiellement la richesse apparente dans le sud. Il est donc important d’interpréter ces résultats avec prudence et de compléter les analyses avec des données d’effort d’échantillonnage si disponibles.
-En somme, la variation spatiale influence profondément la structure des communautés de lépidoptères au Québec, en déterminant à la fois la richesse spécifique, la composition des espèces et les interactions écologiques entre elles.
-
-
-
-Discussion figure 3 {.unnumbered}
-========================================
-Mettre la figure 3
-
-
-
-La figure 3 met en évidence la variabilité temporelle de la présence des espèces de lépidoptères les plus observées au cours de l’année. Cette diversité dans les dates d’arrivée et de départ suggère une niche temporelle propre à chaque espèce, réduisant potentiellement la compétition interspécifique pour les ressources [@ziv_gerbils_2000]. Certaines espèces, comme Plodia interpunctella, sont actives dès le mois de janvier, alors que d'autres, telles que Acleris maccana, n’apparaissent qu’en juin.
-
 On remarque également une forte variabilité dans la durée de présence, allant de 127 jours pour certaines espèces à 243 jours pour Coleotechnites thujaella. Cette disparité reflète probablement des différences dans les stratégies de vie, les tolérances climatiques et les cycles biologiques. En effet, la température est un facteur crucial pour les ectothermes. Chez les insectes, comme les lépidoptères, qui, par leur durée de développement généralement courte, vont avoir plusieurs générations au cours de la saison, chacune soumise à des conditions climatiques différentes  [@gibert_plasticite_2012]. Avec une hausse de la température, les espèces moins plastiques, vont plutôt changer leur aire de répartition en colonisant ou en abandonnant des habitats qui sont devenus favorables ou défavorables. Tandis que les espèces à longue durée de présence vont plutôt répondre à ces changements en modifiant la phénologie de leur cycle de vie ou bien par une adaptation au milieu par plasticité phénotypique. Ces différentes techniques dépendront de l’importance du changement, l’échelle de temps considéré et les traits d’histoire de vie des organismes  [@gibert_plasticite_2012].
 
 Les espèces présentent sur une longue durée pourraient alors jouer un rôle structurant plus constant dans la communauté, alors que les espèces plus éphémères pourraient avoir un impact plus ponctuel mais important durant leur pic d’abondance.
@@ -239,5 +234,3 @@ Conclusion {.unnumbered}
 Bibliographie  {.unnumbered}
 ========================================
 #Référence
-
-

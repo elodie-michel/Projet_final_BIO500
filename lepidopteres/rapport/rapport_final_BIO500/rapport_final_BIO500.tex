@@ -7,47 +7,6 @@
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-% Pandoc syntax highlighting
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 
 % tightlist command for lists without linebreak
 \providecommand{\tightlist}{%
@@ -209,98 +168,6 @@ reproductibles.
 \section*{Discussion figure 1}\label{discussion-figure-1}
 \addcontentsline{toc}{section}{Discussion figure 1}
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.7\linewidth]{rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1} 
-
-}
-
-\caption{\label{fig:fig_richesse_temporelle}Richesse spécifique au fil des années.}\label{fig:fig_richesse_temporelle}
-\end{figure}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.7\linewidth]{rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1} 
-
-}
-
-\caption{\label{fig:fig_richesse_spatiale}Richesse spatiale }\label{fig:fig_richesse_spatiale}
-\end{figure}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-    \FunctionTok{library}\NormalTok{(dplyr)}
-    \FunctionTok{library}\NormalTok{(ggplot2)}
-    \FunctionTok{library}\NormalTok{(lubridate)}
-
-\NormalTok{n\_especes }\OtherTok{\textless{}{-}} \DecValTok{10}
-\NormalTok{pheno }\OtherTok{\textless{}{-}} \FunctionTok{tar\_read}\NormalTok{(fig\_phenologie)}
-
-\NormalTok{  pheno }\OtherTok{\textless{}{-}}\NormalTok{ pheno }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{date\_obs =} \FunctionTok{as.Date}\NormalTok{(date\_obs),}
-           \AttributeTok{jour\_annee =} \FunctionTok{yday}\NormalTok{(date\_obs),}
-           \AttributeTok{annee =} \FunctionTok{year}\NormalTok{(date\_obs))}
-  
-\NormalTok{  summary\_data }\OtherTok{\textless{}{-}}\NormalTok{ pheno }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{group\_by}\NormalTok{(taxa\_name, annee) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{summarise}\NormalTok{(}\AttributeTok{start\_day =} \FunctionTok{min}\NormalTok{(jour\_annee), }\AttributeTok{end\_day =} \FunctionTok{max}\NormalTok{(jour\_annee), }\AttributeTok{.groups =} \StringTok{"drop"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{group\_by}\NormalTok{(taxa\_name) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{summarise}\NormalTok{(}\AttributeTok{start\_jour\_moyen =} \FunctionTok{round}\NormalTok{(}\FunctionTok{mean}\NormalTok{(start\_day)),}
-              \AttributeTok{end\_jour\_moyen =} \FunctionTok{round}\NormalTok{(}\FunctionTok{mean}\NormalTok{(end\_day)),}
-              \AttributeTok{presence\_days =}\NormalTok{ end\_jour\_moyen }\SpecialCharTok{{-}}\NormalTok{ start\_jour\_moyen,}
-              \AttributeTok{.groups =} \StringTok{"drop"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{start\_date =} \FunctionTok{as.Date}\NormalTok{(start\_jour\_moyen, }\AttributeTok{origin =} \StringTok{"2023{-}01{-}01"}\NormalTok{),}
-           \AttributeTok{end\_date =} \FunctionTok{as.Date}\NormalTok{(end\_jour\_moyen, }\AttributeTok{origin =} \StringTok{"2023{-}01{-}01"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(presence\_days)) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{slice\_head}\NormalTok{(}\AttributeTok{n =}\NormalTok{ n\_especes)}
-  
-\NormalTok{  figure\_pheno }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(summary\_data, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{y =} \FunctionTok{reorder}\NormalTok{(taxa\_name, presence\_days), }\AttributeTok{x =}\NormalTok{ start\_date, }\AttributeTok{xend =}\NormalTok{ end\_date)) }\SpecialCharTok{+}
-    \FunctionTok{geom\_segment}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{yend =}\NormalTok{ taxa\_name), }\AttributeTok{color =} \StringTok{"\#8888aa"}\NormalTok{, }\AttributeTok{linewidth =} \FloatTok{1.2}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{geom\_point}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ start\_date), }\AttributeTok{color =} \StringTok{"\#1f78b4"}\NormalTok{, }\AttributeTok{size =} \DecValTok{4}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{geom\_point}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ end\_date), }\AttributeTok{color =} \StringTok{"\#e66101"}\NormalTok{, }\AttributeTok{size =} \DecValTok{4}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{geom\_text}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ start\_date, }\AttributeTok{label =} \FunctionTok{format}\NormalTok{(start\_date, }\StringTok{"\%d \%b"}\NormalTok{)),}
-              \AttributeTok{vjust =} \DecValTok{2}\NormalTok{, }\AttributeTok{color =} \StringTok{"\#1f78b4"}\NormalTok{, }\AttributeTok{fontface =} \StringTok{"bold"}\NormalTok{, }\AttributeTok{size =} \FloatTok{3.5}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{geom\_text}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ end\_date, }\AttributeTok{label =} \FunctionTok{format}\NormalTok{(end\_date, }\StringTok{"\%d \%b"}\NormalTok{)),}
-              \AttributeTok{vjust =} \DecValTok{2}\NormalTok{, }\AttributeTok{color =} \StringTok{"\#e66101"}\NormalTok{, }\AttributeTok{fontface =} \StringTok{"bold"}\NormalTok{, }\AttributeTok{size =} \FloatTok{3.5}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{annotate}\NormalTok{(}\StringTok{"rect"}\NormalTok{, }\AttributeTok{xmin =} \FunctionTok{max}\NormalTok{(summary\_data}\SpecialCharTok{$}\NormalTok{end\_date) }\SpecialCharTok{+} \DecValTok{10}\NormalTok{, }\AttributeTok{xmax =} \FunctionTok{max}\NormalTok{(summary\_data}\SpecialCharTok{$}\NormalTok{end\_date) }\SpecialCharTok{+} \DecValTok{40}\NormalTok{, }
-             \AttributeTok{ymin =} \FloatTok{0.5}\NormalTok{, }\AttributeTok{ymax =} \FunctionTok{nrow}\NormalTok{(summary\_data) }\SpecialCharTok{+} \FloatTok{0.5}\NormalTok{, }\AttributeTok{fill =} \StringTok{"gray50"}\NormalTok{, }\AttributeTok{alpha =} \FloatTok{0.8}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{annotate}\NormalTok{(}\StringTok{"text"}\NormalTok{, }\AttributeTok{x =} \FunctionTok{max}\NormalTok{(summary\_data}\SpecialCharTok{$}\NormalTok{end\_date) }\SpecialCharTok{+} \DecValTok{25}\NormalTok{, }\AttributeTok{y =} \FunctionTok{nrow}\NormalTok{(summary\_data) }\SpecialCharTok{+} \DecValTok{1}\NormalTok{, }
-             \AttributeTok{label =} \StringTok{"Jours de présence"}\NormalTok{, }\AttributeTok{color =} \StringTok{"white"}\NormalTok{, }\AttributeTok{fontface =} \StringTok{"bold"}\NormalTok{, }\AttributeTok{size =} \DecValTok{5}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{geom\_text}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \FunctionTok{max}\NormalTok{(summary\_data}\SpecialCharTok{$}\NormalTok{end\_date) }\SpecialCharTok{+} \DecValTok{25}\NormalTok{, }\AttributeTok{y =}\NormalTok{ taxa\_name, }
-                  \AttributeTok{label =}\NormalTok{ presence\_days), }\AttributeTok{color =} \StringTok{"white"}\NormalTok{, }\AttributeTok{fontface =} \StringTok{"bold"}\NormalTok{, }\AttributeTok{size =} \DecValTok{5}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{annotate}\NormalTok{(}\StringTok{"text"}\NormalTok{, }\AttributeTok{x =} \FunctionTok{max}\NormalTok{(summary\_data}\SpecialCharTok{$}\NormalTok{end\_date) }\SpecialCharTok{+} \DecValTok{10}\NormalTok{, }\AttributeTok{y =} \FunctionTok{nrow}\NormalTok{(summary\_data) }\SpecialCharTok{+} \DecValTok{1}\NormalTok{, }
-             \AttributeTok{label =} \StringTok{"Jours de présence"}\NormalTok{, }\AttributeTok{color =} \StringTok{"gray20"}\NormalTok{, }\AttributeTok{fontface =} \StringTok{"italic"}\NormalTok{, }\AttributeTok{size =} \DecValTok{5}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{annotate}\NormalTok{(}\StringTok{"point"}\NormalTok{, }\AttributeTok{x =} \FunctionTok{min}\NormalTok{(summary\_data}\SpecialCharTok{$}\NormalTok{start\_date) }\SpecialCharTok{{-}} \DecValTok{30}\NormalTok{, }\AttributeTok{y =} \FunctionTok{nrow}\NormalTok{(summary\_data) }\SpecialCharTok{+} \DecValTok{1}\NormalTok{, }
-             \AttributeTok{color =} \StringTok{"\#1f78b4"}\NormalTok{, }\AttributeTok{size =} \DecValTok{4}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{annotate}\NormalTok{(}\StringTok{"text"}\NormalTok{, }\AttributeTok{x =} \FunctionTok{min}\NormalTok{(summary\_data}\SpecialCharTok{$}\NormalTok{start\_date) }\SpecialCharTok{{-}} \DecValTok{25}\NormalTok{, }\AttributeTok{y =} \FunctionTok{nrow}\NormalTok{(summary\_data) }\SpecialCharTok{+} \DecValTok{1}\NormalTok{, }
-             \AttributeTok{label =} \StringTok{"Arrivée moyenne"}\NormalTok{, }\AttributeTok{hjust =} \DecValTok{0}\NormalTok{, }\AttributeTok{color =} \StringTok{"\#1f78b4"}\NormalTok{, }\AttributeTok{fontface =} \StringTok{"bold"}\NormalTok{, }\AttributeTok{size =} \DecValTok{4}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{annotate}\NormalTok{(}\StringTok{"point"}\NormalTok{, }\AttributeTok{x =} \FunctionTok{min}\NormalTok{(summary\_data}\SpecialCharTok{$}\NormalTok{start\_date) }\SpecialCharTok{{-}} \DecValTok{30}\NormalTok{, }\AttributeTok{y =} \FunctionTok{nrow}\NormalTok{(summary\_data) }\SpecialCharTok{+} \FloatTok{0.50}\NormalTok{ , }
-             \AttributeTok{color =} \StringTok{"\#e66101"}\NormalTok{, }\AttributeTok{size =} \DecValTok{4}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{annotate}\NormalTok{(}\StringTok{"text"}\NormalTok{, }\AttributeTok{x =} \FunctionTok{min}\NormalTok{(summary\_data}\SpecialCharTok{$}\NormalTok{start\_date) }\SpecialCharTok{{-}} \DecValTok{25}\NormalTok{, }\AttributeTok{y =} \FunctionTok{nrow}\NormalTok{(summary\_data) }\SpecialCharTok{+} \FloatTok{0.50}\NormalTok{ , }
-             \AttributeTok{label =} \StringTok{"Départ moyen"}\NormalTok{, }\AttributeTok{hjust =} \DecValTok{0}\NormalTok{, }\AttributeTok{color =} \StringTok{"\#e66101"}\NormalTok{, }\AttributeTok{fontface =} \StringTok{"bold"}\NormalTok{, }\AttributeTok{size =} \DecValTok{4}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{expand\_limits}\NormalTok{(}\AttributeTok{y =} \FunctionTok{nrow}\NormalTok{(summary\_data) }\SpecialCharTok{+} \FloatTok{1.5}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{scale\_x\_date}\NormalTok{(}\AttributeTok{date\_labels =} \StringTok{"\%B"}\NormalTok{, }\AttributeTok{date\_breaks =} \StringTok{"1 month"}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{labs}\NormalTok{(}\AttributeTok{y =} \ConstantTok{NULL}\NormalTok{, }\AttributeTok{x =} \ConstantTok{NULL}\NormalTok{, }\AttributeTok{title =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"Phénologie moyenne des "}\NormalTok{, n\_especes, }\StringTok{" espèces les plus observées"}\NormalTok{)) }\SpecialCharTok{+}
-    \FunctionTok{theme\_minimal}\NormalTok{(}\AttributeTok{base\_size =} \DecValTok{16}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle =} \DecValTok{45}\NormalTok{, }\AttributeTok{hjust =} \DecValTok{1}\NormalTok{),}
-          \AttributeTok{axis.text.y =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{margin =} \FunctionTok{margin}\NormalTok{(}\AttributeTok{r =} \DecValTok{10}\NormalTok{)),}
-          \AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{18}\NormalTok{, }\AttributeTok{face =} \StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{)}
-            \SpecialCharTok{+} \FunctionTok{coord\_cartesian}\NormalTok{(}\AttributeTok{clip =} \StringTok{"off"}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{theme\_minimal}\NormalTok{(}\AttributeTok{base\_size =} \DecValTok{16}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{theme}\NormalTok{(}
-    \AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle =} \DecValTok{30}\NormalTok{, }\AttributeTok{hjust =} \DecValTok{1}\NormalTok{),}
-    \AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{18}\NormalTok{, }\AttributeTok{face =} \StringTok{"bold"}\NormalTok{, }\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}
-    \AttributeTok{plot.margin =} \FunctionTok{margin}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\StringTok{"cm"}\NormalTok{)}
-\NormalTok{  ))}
-
-
-
-
-\CommentTok{\# Afficher la figure}
-\NormalTok{figure\_pheno}
-\end{Highlighting}
-\end{Shaded}
-
 La richesse spécifique observée à travers le temps révèle une dynamique
 marquée par une accélération récente. Pendant plus d'un siècle, la
 richesse observée est demeurée faible et relativement constante, ce qui
@@ -315,6 +182,15 @@ qu'à une meilleure accessibilité des outils d'identification. Ces
 facteurs peuvent conduire à une augmentation apparente de la richesse
 spécifique, sans nécessairement refléter une transformation écologique
 réelle des communautés (Bowler et al., 2025).
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.8\linewidth]{rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1} 
+
+}
+
+\caption{\label{fig:fig_richesse_temporelle}(a) Concentration en richesse spécifique des lépidoptères sur une échelle de temps comprise entre 1859 et 2023. (b) Concentration en richesse spécifique des lépidoptères sur une échelle de temps comprise entre 2000 et 2023.}\label{fig:fig_richesse_temporelle}
+\end{figure}
 
 Même si cette figure ne montre pas directement les variations spatiales,
 la montée récente de la richesse spécifique pourrait aussi être le
@@ -348,16 +224,23 @@ d'observation (Bowler et al., 2025).
 \section*{Discussion figure 2}\label{discussion-figure-2}
 \addcontentsline{toc}{section}{Discussion figure 2}
 
-Mettre la figure 2
-
-La carte de la richesse spécifique des lépidoptères au Québec illustre
-de façon marquée les variations spatiales dans la composition des
-communautés. On remarque une très forte concentration de la richesse
+La carte de la richesse spécifique des lépidoptères au Québec (Figure 2)
+illustre de façon marquée les variations spatiales dans la composition
+des communautés. On remarque une très forte concentration de la richesse
 spécifique dans le sud de la province. Ces zones coïncident largement
 avec les régions les plus densément peuplées, les plus facilement
 accessibles et les plus transformées par l'activité humaine (Québec,
 2021). En revanche, la richesse spécifique diminue de manière marquée en
 remontant vers le nord.
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1} 
+
+}
+
+\caption{\label{fig:fig_richesse_spatiale}Carte du Québec représentant un gradient de concentrations en richesse spécifiques des lépidoptères, allant de 0 à 200, à la suite de l’échantillonnage sur une échelle de temps compris entre 1859 et 2023.}\label{fig:fig_richesse_spatiale}
+\end{figure}
 
 Plusieurs facteurs peuvent expliquer cette hétérogénéité. Sur le plan
 écologique, les gradients de latitude, d'altitude et de climat
@@ -386,10 +269,7 @@ spatiale influence profondément la structure des communautés de
 lépidoptères au Québec, en déterminant à la fois la richesse spécifique,
 la composition des espèces et les interactions écologiques entre elles.
 
-\section*{Discussion figure 3}\label{discussion-figure-3}
-\addcontentsline{toc}{section}{Discussion figure 3}
-
-Mettre la figure 3
+Discussion figure 3 \{.unnumbered\}
 
 La figure 3 met en évidence la variabilité temporelle de la présence des
 espèces de lépidoptères les plus observées au cours de l'année. Cette
@@ -399,6 +279,20 @@ compétition interspécifique pour les ressources (Ziv et Smallwood,
 2000). Certaines espèces, comme Plodia interpunctella, sont actives dès
 le mois de janvier, alors que d'autres, telles que Acleris maccana,
 n'apparaissent qu'en juin.
+
+\begin{verbatim}
+## Warning: Use of `summary_data$end_date` is discouraged.
+## i Use `end_date` instead.
+\end{verbatim}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.8\linewidth]{rapport_final_BIO500_files/figure-latex/fig:fig_phenologie-1} 
+
+}
+
+\caption{\label{fig:fig_phenologie}Variabilité temporelle de la présence des 10 espèces de lépidoptères les plus abondantes en comparant leurs dates d’arrivée et de départ durant une année complète.}\label{fig:fig:fig_phenologie}
+\end{figure}
 
 On remarque également une forte variabilité dans la durée de présence,
 allant de 127 jours pour certaines espèces à 243 jours pour

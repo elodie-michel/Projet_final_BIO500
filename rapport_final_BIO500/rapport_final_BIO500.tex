@@ -105,13 +105,13 @@ Breton}
 partir d'une base de données sur les lépidoptères afin d'analyser
 l'effet des variations temporelles et spatiales sur leurs communautés.
 Après plusieurs analyses, on remarque une augmentation en richesse
-spécifique au fil des générations, soit très forte après les années 2000
-mais très variable en deçà, probablement par une fluctuation d'effort
-d'échantillonnage ou par plusieurs pressions écologiques. Il y toutefois
-une forte concentration de la richesse spécifique dans le sud de la
-province du Québec et plus faible au nord, une hétérogénéité expliquée
-par les gradients d'altitude et de climat. Enfin, la diversité des
-espèces dans les dates d'arrivée et de départ suggère une niche
+spécifique au fil des générations, soit très forte après les années
+2000, mais très variable en deçà, probablement par une fluctuation
+d'effort d'échantillonnage ou par plusieurs pressions écologiques. Il y
+a toutefois une forte concentration de la richesse spécifique dans le
+sud de la province du Québec et plus faible au nord, une hétérogénéité
+expliquée par les gradients d'altitude et de climat. Enfin, la diversité
+des espèces dans les dates d'arrivée et de départ suggère une niche
 temporelle propre à chacune, aidant à la réduction de la compétition
 interspécifique pour les ressources.
 
@@ -136,28 +136,28 @@ date, le lieu où l'échantillon a été prélevé à l'aide de coordonnées
 géographiques (latitude et longitude), l'heure, le jour et l'année
 d'observation ainsi que tous les droits d'auteur, comprenant le
 créateur, le titre, les licences, la source originale et le publicateur.
-Cette dernière comprenant environ 441 891 observations et ce, sur un
+Cette dernière comprenant environ 441 891 observations, et ce, sur un
 intervalle de données allant de 1859 à 2023. Afin de pouvoir utiliser
 cette base de données, nous avons procédé à une revalidation en
 éliminant et triant les lacunes humaines potentielles dans
 l'enregistrement des données à l'aide du logiciel R studio. Une variété
-de tests a été exécuté pour parvenir à l'obtention de données valides et
-d'une reproductibilité dans nos résultats. Des erreurs non négligeables,
-comme des NA non-expliquer, des échantillons répétés, des valeurs
-irréels dans les dates, les années, les heures et même les coordonnées,
-devant être filtrer pour être des points seulement au Québec, ont été
-corrigés et l'identification des bons types par colonnes ont été
-modifiés. Ensuite, une fois la base de données considérée comme valide,
-nous avons pu procéder à la création de tables, avec l'aide du langage
-informatique SQL, en regroupant les colonnes pertinentes ensembles,
-créer les liens entre ces dernières et ainsi optimiser l'analyse de nos
-données. En faisant des requêtes dans nos différentes tables, nous avons
-alors été en mesure de créer des figures nous aidant à répondre à notre
-question de départ. Finalement, une fois tous nos manipulations insérées
-dans des scripts différents dans le logiciel R, nous avons procédé à
-l'automatisation de notre code à l'aide du package Target et ainsi créer
-une chaîne de traitement permettant à nos résultats d'être
-reproductibles.
+de tests a été exécutée pour parvenir à l'obtention de données valides
+et d'une reproductibilité dans nos résultats. Des erreurs non
+négligeables, comme des NA non-expliquer, des échantillons répétés, des
+valeurs irréelles dans les dates, les années, les heures et même les
+coordonnées, devant être filtrées pour être des points seulement au
+Québec, ont été corrigées et l'identification des bons types par
+colonnes ont été modifiés. Ensuite, une fois la base de données
+considérée comme valide, nous avons pu procéder à la création de tables,
+avec l'aide du langage informatique SQL, en regroupant les colonnes
+pertinentes ensemble, créer les liens entre ces dernières et ainsi
+optimiser l'analyse de nos données. En faisant des requêtes dans nos
+différentes tables, nous avons alors été en mesure de créer des figures
+nous aidant à répondre à notre question de départ. Finalement, une fois
+toutes nos manipulations insérées dans des scripts différents dans le
+logiciel R, nous avons procédé à l'automatisation de notre code à l'aide
+du package Target et ainsi créer une chaîne de traitement permettant à
+nos résultats d'être reproductibles.
 
 \section*{Résultats \& Discussion}\label{ruxe9sultats-discussion}
 \addcontentsline{toc}{section}{Résultats \& Discussion}
@@ -172,10 +172,10 @@ richesse observée est demeurée faible et relativement constante, ce qui
 pourrait s'expliquer par un effort d'échantillonnage limité ou des
 lacunes dans l'enregistrement des données (Bowler et al., 2025). Ce
 n'est qu'à partir des années 2000 que l'on observe une augmentation
-brutale du nombre d'espèces recensées, comme le montrent la
-\textbf{Figure \ref{fig:fig_richesse_temporelle}}. Cette tendance peut
-être liée à l'émergence de nouvelles technologies de collecte de données
-(ex. plateformes participatives comme iNaturalist ou eButterfly), à une
+brutale du nombre d'espèces recensées, comme le montre la \textbf{Figure
+\ref{fig:fig_richesse_temporelle}}. Cette tendance peut être liée à
+l'émergence de nouvelles technologies de collecte de données (ex.
+plateformes participatives comme iNaturalist ou eButterfly), à une
 mobilisation accrue des citoyens scientifiques, ainsi qu'à une meilleure
 accessibilité des outils d'identification. Ces facteurs peuvent conduire
 à une augmentation apparente de la richesse spécifique, sans
@@ -273,9 +273,9 @@ phénologie de la présence des espèces de lépidoptères les plus observées
 au cours de l'année. Cette diversité dans les dates d'arrivée et de
 départ suggère une niche temporelle propre à chaque espèce, réduisant
 potentiellement la compétition interspécifique pour les ressources (Ziv
-et Smallwood, 2000). Certaines espèces, comme Plodia interpunctella,
-sont actives dès le mois de janvier, alors que d'autres, telles que
-Acleris maccana, n'apparaissent qu'en juin.
+et Smallwood, 2000). Certaines espèces, comme \emph{Plodia
+interpunctella}, sont actives dès le mois de janvier, alors que
+d'autres, telles que \emph{Acleris maccana}, n'apparaissent qu'en juin.
 
 \begin{figure}[H]
 
@@ -288,12 +288,12 @@ Acleris maccana, n'apparaissent qu'en juin.
 
 On remarque également une forte variabilité dans la durée de présence,
 allant de 127 jours pour certaines espèces à 243 jours pour
-Coleotechnites thujaella. Cette disparité reflète probablement des
-différences dans les stratégies de vie, les tolérances climatiques et
-les cycles biologiques. En effet, la température est un facteur crucial
-pour les ectothermes. Chez les insectes, comme les lépidoptères, qui,
-par leur durée de développement généralement courte, vont avoir
-plusieurs générations au cours de la saison, chacune soumise à des
+\emph{Coleotechnites thujaella}. Cette disparité reflète probablement
+des différences dans les stratégies de vie, les tolérances climatiques
+et les cycles biologiques. En effet, la température est un facteur
+crucial pour les ectothermes. Chez les insectes, comme les lépidoptères,
+qui, par leur durée de développement généralement courte, vont avoir
+plusieurs générations au cours de la saison, chacun soumis à des
 conditions climatiques différentes (Gibert, 2012). Avec une hausse de la
 température, les espèces moins plastiques, vont plutôt changer leur aire
 de répartition en colonisant ou en abandonnant des habitats qui sont
@@ -305,7 +305,7 @@ l'importance du changement, l'échelle de temps considéré et les traits
 d'histoire de vie des organismes (Gibert, 2012). Les espèces présentent
 sur une longue durée pourraient alors jouer un rôle structurant plus
 constant dans la communauté, alors que les espèces plus éphémères
-pourraient avoir un impact plus ponctuel mais important durant leur pic
+pourraient avoir un impact plus ponctuel, mais important durant leur pic
 d'abondance. Les variations temporelles illustrées influencent donc
 directement la structure des communautés, en affectant les interactions
 écologiques (comme la compétition, la prédation ou la pollinisation) et

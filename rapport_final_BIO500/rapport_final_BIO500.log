@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.21)  22 APR 2025 14:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.21)  22 APR 2025 14:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1126,15 +1126,6 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.49997pt on input line 101.
 
 
-Package mdframed Info: mdframed works in twoside mode on input line 161.
-Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 161.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 161.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 5.69998pt on input line 161.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 4.74998pt on input line 161.
 <rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf, id=39, 469.755pt x 433.62pt>
 File: rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf Graphic file (type pdf)
 <use rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf>
@@ -1143,36 +1134,30 @@ Package pdftex.def Info: rapport_final_BIO500_files/figure-latex/fig_richesse_te
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.64998pt on input line 191.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [1{c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
-]
-<rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf, id=52, 469.755pt x 325.215pt>
+ <./rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf>]
+<rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf, id=58, 469.755pt x 325.215pt>
 File: rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf Graphic file (type pdf)
 <use rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf>
 Package pdftex.def Info: rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf  used on input line 237.
 (pdftex.def)             Requested size: 172.26704pt x 119.26074pt.
 
 
-<rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf, id=54, 650.43pt x 578.16pt>
+<rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf, id=60, 650.43pt x 578.16pt>
 File: rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf Graphic file (type pdf)
 <use rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf>
 Package pdftex.def Info: rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf  used on input line 282.
 (pdftex.def)             Requested size: 196.87823pt x 175.002pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[2 <./rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf> <./rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf>]
 
 
 
-[2 <./rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf> <./rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf>]
-
-
-
-[3 <./rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf>] 
+[3] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./rapport_final_BIO500.aux)
  ***********
@@ -1186,18 +1171,18 @@ Package rerunfilecheck Info: File `rapport_final_BIO500.out' has not changed.
 (rerunfilecheck)             Checksum: ACE47659EA603964A5A2DC3F238367DA;1258.
  ) 
 Here is how much of TeX's memory you used:
- 30411 strings out of 471545
- 572290 string characters out of 5517559
- 983428 words of memory out of 5000000
- 56210 multiletter control sequences out of 15000+600000
- 692354 words of font info for 176 fonts, out of 8000000 for 9000
+ 30247 strings out of 471545
+ 567941 string characters out of 5517559
+ 984967 words of memory out of 5000000
+ 56056 multiletter control sequences out of 15000+600000
+ 688545 words of font info for 169 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 117i,12n,121p,1017b,1114s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,12n,121p,1017b,480s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on rapport_final_BIO500.pdf (3 pages, 396148 bytes).
+Output written on rapport_final_BIO500.pdf (3 pages, 395963 bytes).
 PDF statistics:
  140 PDF objects out of 1000 (max. 8388607)
  114 compressed objects within 2 object streams
  15 named destinations out of 1000 (max. 500000)
- 48228 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 44132 words of extra memory for PDF output out of 51595 (max. 10000000)
 

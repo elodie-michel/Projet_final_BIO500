@@ -17,24 +17,26 @@
 \newfloat{sigstatement}{b!}{sst}
 
 \additionalelement{%
-\afterpage{\begin{sigstatement}
-\sffamily
-\mdfdefinestyle{pnassigstyle}{linewidth=0.7pt,backgroundcolor=pnasblueback,linecolor=pnasbluetext,fontcolor=pnasbluetext,innertopmargin=6pt,innerrightmargin=6pt,innerbottommargin=6pt,innerleftmargin=6pt}
-\@ifundefined{@significancestatement}{}{%	
-	\begin{mdframed}[style=pnassigstyle]%
-	\section*{Significance Statement}%
-	\@significancestatement
-	\end{mdframed}}
+% Comment out or remove this block to disable the Significance Statement
+%\afterpage{\begin{sigstatement}
+%\sffamily
+%\mdfdefinestyle{pnassigstyle}{linewidth=0.7pt,backgroundcolor=pnasblueback,linecolor=pnasbluetext,fontcolor=pnasbluetext,innertopmargin=6pt,innerrightmargin=6pt,innerbottommargin=6pt,innerleftmargin=6pt}
+%\@ifundefined{@significancestatement}{}{%	
+%	\begin{mdframed}[style=pnassigstyle]%
+%	\section*{Significance Statement}%
+%	\@significancestatement
+%	\end{mdframed}}
 %     \medskip
-\scriptsize
-\@ifundefined{@authorcontributions}{}{\@authorcontributions}
-\vskip5pt%
-\@ifundefined{@authordeclaration}{}{\@authordeclaration}
-\vskip5pt%
-\@ifundefined{@equalauthors}{}{\@equalauthors}
-\vskip5pt%
-\@ifundefined{@correspondingauthor}{}{\@correspondingauthor}
-\end{sigstatement}}
+%\scriptsize
+%\@ifundefined{@authorcontributions}{}{\@authorcontributions}
+%\vskip5pt%
+%\@ifundefined{@authordeclaration}{}{\@authordeclaration}
+%\vskip5pt%
+%\@ifundefined{@equalauthors}{}{\@equalauthors}
+%\vskip5pt%
+%\@ifundefined{@correspondingauthor}{}{\@correspondingauthor}
+%\end{sigstatement}}
 }
+
 
 \endinput

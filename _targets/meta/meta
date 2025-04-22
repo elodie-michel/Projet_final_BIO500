@@ -1,13 +1,4 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-traiter_donnees|function|5002d650e0cb35b6
-extraire_phenologie|function|a1a880e5cb63d8f5
-extraire_richesse_temporelle|function|0fdb9461994b0797
-creer_base_de_donnees_SQL|function|d94ecdd3b08c7333
-test_erreurs|function|f31de0a3e0582125
-extraire_richesse_spatiale|function|9a98a36da392ae55
-creer_tables|function|392705fd96cf0aa0
-nettoyer_les_donnees|function|c79019e1275778cd
-dossier|stem|5d89b7b218bcc406|0498e442101e8fdd|2c530c1562a7fbd1|171394814|donnees|t20200.7347346474s|s115792765b|115792765|file|local|vector|||1.35|le package dplyr a été compilé avec la version R 4.2.3. le package RSQLite a été compilé avec la version R 4.2.3. le package data.table a été compilé avec la version R 4.2.3. le package sf a été compilé avec la version R 4.2.3. le package ggplot2 a été compilé avec la version R 4.2.3|
 quebec|stem|96f433e2c7feeb3c|9d37bc956d3bda4e|2c530c1562a7fbd1|-224390329||t20200.7465715794s|s441229b|441229|rds|local|vector|||0.08||
 bd_brut|stem|41d779c43f5936be|cdb17769d4aed64a|e948b41ce447f8a6|1815994849||t20200.7466603077s|s5909275b|5909275|rds|local|vector|||4.47|NAs introduits lors de la conversion automatique. NAs introduits lors de la conversion automatique|
 bd_nettoye|stem|926c3bcccd9028b1|bb74e69dc7eb1516|050409b45fb7e249|175388148||t20200.7467389209s|s5186171b|5186171|rds|local|vector|||4.19||
@@ -20,4 +11,13 @@ base_sqlite|stem|734db133b9562e72|3549dea580ee8b3d|f753ac525fed5293|1503412467|l
 fig_phenologie|stem|887184abd31014cd|0f719886454dc64a|5726039af1e2dd4d|-554593398||t20200.7470145152s|s1092982b|1092982|rds|local|vector|||0.22||
 fig_richesse_spatiale|stem|c4ddd2734659d42b|9c2d195b0fa022b8|323c998b7ba6297f|646528546||t20200.7470207947s|s5977b|5977|rds|local|vector|||0.52||
 fig_richesse_temporelle|stem|5be34755eb547989|63ce400540f61b00|47bf8a1630322930|543854728||t20200.7470236s|s667b|667|rds|local|vector|||0.24||
-rapport|stem|a82e30b0d6a12381|2b66b77a80a6b991|77e75c56aeae0e81|-1266156412|rapport_final_BIO500/rapport_final_BIO500.pdf*rapport_final_BIO500/rapport_final_BIO500.Rmd*rapport_final_BIO500/rapport_final_BIO500_files|t20200.7471809329s|s670599b|670599|file|local|vector|||13.63|LaTeX Warning Label figfig_richesse_temporelle multiply defined.. LaTeX Warning Label figfig_richesse_spatiale multiply defined.. LaTeX Warning Label figfig_phenologie multiply defined.. Package microtype Warning Unable to apply patch eqnum on input line 85.. LaTeX Warning There were multiplydefined labels.|
+dossier|stem|5d89b7b218bcc406|0498e442101e8fdd|2c530c1562a7fbd1|171394814|donnees|t20200.7349088894s|s32768b|32768|file|local|vector|||1.35|le package dplyr a été compilé avec la version R 4.2.3. le package RSQLite a été compilé avec la version R 4.2.3. le package data.table a été compilé avec la version R 4.2.3. le package sf a été compilé avec la version R 4.2.3. le package ggplot2 a été compilé avec la version R 4.2.3|
+traiter_donnees|function|5002d650e0cb35b6
+extraire_phenologie|function|a1a880e5cb63d8f5
+extraire_richesse_temporelle|function|0fdb9461994b0797
+creer_base_de_donnees_SQL|function|d94ecdd3b08c7333
+test_erreurs|function|f31de0a3e0582125
+extraire_richesse_spatiale|function|9a98a36da392ae55
+creer_tables|function|392705fd96cf0aa0
+nettoyer_les_donnees|function|c79019e1275778cd
+rapport|stem|4676037cf75d3e19|2b66b77a80a6b991|77e75c56aeae0e81|-1266156412|rapport_final_BIO500/rapport_final_BIO500.pdf*rapport_final_BIO500/rapport_final_BIO500.Rmd*rapport_final_BIO500/rapport_final_BIO500_files|t20200.7575153272s|s695426b|695426|file|local|vector|||19.89|LaTeX Warning Label figfig_richesse_temporelle multiply defined.. LaTeX Warning Label figfig_richesse_spatiale multiply defined.. LaTeX Warning Label figfig_phenologie multiply defined.. Package microtype Warning Unable to apply patch eqnum on input line 85.. LaTeX Warning There were multiplydefined labels.|

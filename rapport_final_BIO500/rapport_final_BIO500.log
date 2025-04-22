@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.21)  22 APR 2025 13:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.21)  22 APR 2025 14:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1135,32 +1135,32 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 5.69998pt on input line 164.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 4.74998pt on input line 164.
-<rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf, id=38, 469.755pt x 433.62pt>
+<rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf, id=39, 469.755pt x 433.62pt>
 File: rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf Graphic file (type pdf)
 <use rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf>
-Package pdftex.def Info: rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf  used on input line 189.
+Package pdftex.def Info: rapport_final_BIO500_files/figure-latex/fig_richesse_temporelle-1.pdf  used on input line 190.
 (pdftex.def)             Requested size: 196.87823pt x 181.72878pt.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.64998pt on input line 193.
+(Font)              scaled to size 6.64998pt on input line 194.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 195.
+(Font)              <7> on input line 196.
 [1{c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-<rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf, id=50, 469.755pt x 325.215pt>
+<rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf, id=55, 469.755pt x 325.215pt>
 File: rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf Graphic file (type pdf)
 <use rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf>
-Package pdftex.def Info: rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf  used on input line 240.
+Package pdftex.def Info: rapport_final_BIO500_files/figure-latex/fig_richesse_spatiale-1.pdf  used on input line 242.
 (pdftex.def)             Requested size: 172.26704pt x 119.26074pt.
 
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 286.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 288.
 (c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1169,14 +1169,14 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (27.9526pt too wide) in paragraph at lines 289--289
+Overfull \hbox (27.9526pt too wide) in paragraph at lines 291--291
 []\T1/lmtt/m/n/9 ## Warning: Use of `summary_data$end_date` is discouraged.[] 
  []
 
-<rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf, id=51, 650.43pt x 578.16pt>
+<rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf, id=57, 650.43pt x 578.16pt>
 File: rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf Graphic file (type pdf)
 <use rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf>
-Package pdftex.def Info: rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf  used on input line 293.
+Package pdftex.def Info: rapport_final_BIO500_files/figure-latex/fig_phenologie-1.pdf  used on input line 295.
 (pdftex.def)             Requested size: 196.87823pt x 175.002pt.
 
 Underfull \vbox (badness 4048) has occurred while \output is active []
@@ -1201,18 +1201,18 @@ Package rerunfilecheck Info: File `rapport_final_BIO500.out' has not changed.
 (rerunfilecheck)             Checksum: ACE47659EA603964A5A2DC3F238367DA;1258.
  ) 
 Here is how much of TeX's memory you used:
- 30464 strings out of 471545
- 573247 string characters out of 5517559
+ 30475 strings out of 471545
+ 573376 string characters out of 5517559
  984767 words of memory out of 5000000
- 56265 multiletter control sequences out of 15000+600000
- 693286 words of font info for 177 fonts, out of 8000000 for 9000
+ 56267 multiletter control sequences out of 15000+600000
+ 696662 words of font info for 182 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  117i,14n,121p,1017b,1116s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt9.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on rapport_final_BIO500.pdf (3 pages, 395588 bytes).
+<c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt9.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/elopa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on rapport_final_BIO500.pdf (3 pages, 420241 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
+ 148 PDF objects out of 1000 (max. 8388607)
+ 120 compressed objects within 2 object streams
  15 named destinations out of 1000 (max. 500000)
- 48740 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 50788 words of extra memory for PDF output out of 51595 (max. 10000000)
 

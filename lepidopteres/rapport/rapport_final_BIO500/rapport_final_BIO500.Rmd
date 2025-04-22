@@ -148,7 +148,7 @@ Discussion figure 3 {.unnumbered}
 
 La figure 3 met en évidence la variabilité temporelle de la présence des espèces de lépidoptères les plus observées au cours de l’année. Cette diversité dans les dates d’arrivée et de départ suggère une niche temporelle propre à chaque espèce, réduisant potentiellement la compétition interspécifique pour les ressources [@ziv_gerbils_2000]. Certaines espèces, comme Plodia interpunctella, sont actives dès le mois de janvier, alors que d'autres, telles que Acleris maccana, n’apparaissent qu’en juin.
 
-```{r fig:fig_phenologie, echo=FALSE, fig.cap="\\label{fig:fig_phenologie}Variabilité temporelle de la présence des 10 espèces de lépidoptères les plus abondantes en comparant leurs dates d’arrivée et de départ durant une année complète.", fig.align='center',out.width='80%',fig.width=9, fig.height=8, fig.pos="H"}
+```{r fig_phenologie, echo=FALSE, fig.cap="\\label{fig:fig_phenologie}Variabilité temporelle de la présence des 10 espèces de lépidoptères les plus abondantes en comparant leurs dates d’arrivée et de départ durant une année complète.", fig.align='center',out.width='80%',fig.width=9, fig.height=8, fig.pos="H"}
 
 library(dplyr)
 library(ggplot2)

@@ -41,6 +41,18 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage{lettrine} % For dropped capitals
 
+%% For the Significance Statement & footnote on the first page
+\RequirePackage{afterpage}
+\RequirePackage{ifpdf,ifxetex}
+\ifpdf\else
+  \ifxetex\else
+    \def\pgfsysdriver{pgfsys-dvipdfm.def}
+    \pdfpagewidth=\paperwidth
+    \pdfpageheight=\paperheight
+\fi\fi
+\RequirePackage{xcolor}
+\RequirePackage{tikz}
+\RequirePackage[framemethod=tikz]{mdframed}
 
 %% Hyperlinking
 \RequirePackage[colorlinks=true, allcolors=blue]{hyperref}
@@ -82,7 +94,7 @@
 
 %% Watermark 
 \newboolean{displaywatermark}
-\setboolean{displaywatermark}{false} % Set to false to remove the watermark
+\setboolean{displaywatermark}{true} % Set to false to remove the watermark
 \AtBeginDocument{%
   \ifthenelse{\boolean{displaywatermark}}{%
   \RequirePackage{draftwatermark}
@@ -193,7 +205,8 @@
 \pagestyle{fancy}          % Enables the custom headers/footers
 
 \fancypagestyle{firststyle}{
-   \fancyfoot{}
+   \fancyfoot[R]{\footerfont PNAS\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}vol. XXX\hspace{7pt}|\hspace{7pt}no. XX\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
+   \fancyfoot[L]{\footerfont\@ifundefined{@doi}{}{\@doi}}
 }
 
 
@@ -205,7 +218,9 @@
 \cfoot{}%
 \rfoot{}%
 
-\fancyfoot{}
+\fancyfoot[LE]{\footerfont\textbf{\thepage}\hspace{7pt}|\hspace{7pt}\@ifundefined{@doi}{}{\@doi}}
+\fancyfoot[RO]{\footerfont PNAS\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}vol. XXX\hspace{7pt}|\hspace{7pt}no. XX\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
+\fancyfoot[RE,LO]{\footerfont\@ifundefined{@leadauthor}{}{\@leadauthor}\ifnum \value{authors} > 1\hspace{5pt}\textit{et al.}\fi}
 
 \renewcommand{\headrulewidth}{0pt}% % No header rule
 \renewcommand{\footrulewidth}{0pt}% % No footer rule
@@ -423,7 +438,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \floatstyle{plain}
 \newfloat{@widetext}{hbt!}{wtt}
 \newenvironment{widetext}{%
-  \PackageWarning{pnas-new}{Use of `widetext` is not recommended. We will now place it at the top or bottom of a page.}
+  \PackageWarning{pnas-new}{Use of widetext is not recommended. We will now place it at the top or bottom of a page.}
   \begin{@widetext*}[bt!]
   \marginnote{\itshape\footnotesize\color{red}Use of \texttt{widetext} is not recommended.}
   \hrule

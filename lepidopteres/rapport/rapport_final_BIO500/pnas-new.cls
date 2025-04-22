@@ -101,7 +101,7 @@
   \SetWatermarkAngle{45}
   \SetWatermarkColor{gray!20}
   \SetWatermarkFontSize{3cm}
-  \SetWatermarkText{{\fontfamily{bch}\bfseries DRAFT}}
+  \SetWatermarkText{{\fontfamily{bch}}}
 }{}
 }
 

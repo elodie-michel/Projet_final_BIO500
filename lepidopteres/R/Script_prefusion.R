@@ -1,37 +1,38 @@
+# Fonction pour lire, nettoyer et fusionner plusieurs fichiers CSV dans un dossier (sauf le fichier taxonomique)
 traiter_donnees <- function(dossier) {
-  library(dplyr)
+  library(dplyr)  # Pour la manipulation de données
   
-  # Lire les fichiers CSV sauf "taxonomie.csv"
-  fichiers_csv <- list.files(dossier, pattern = "\\.csv$", full.names = TRUE)
-  fichiers_csv <- fichiers_csv[!grepl("taxonomie\\.csv$", fichiers_csv)]
+  # Étape 1 : Identifier les fichiers CSV à lire 
+  fichiers_csv <- list.files(dossier, pattern = "\\.csv$", full.names = TRUE)  # Lister tous les fichiers CSV dans le dossier
+  fichiers_csv <- fichiers_csv[!grepl("taxonomie\\.csv$", fichiers_csv)]  # Exclure le fichier "taxonomie.csv" (non destiné à l'analyse)
   
-  # Lire les fichiers et ajouter "d_" devant les noms
+  # Étape 2 : Lire les fichiers CSV et les traiter individuellement 
   liste_donnees <- lapply(fichiers_csv, function(fichier) {
-    df <- read.csv(fichier)
+    df <- read.csv(fichier)  # Lire chaque fichier CSV
     
-    # Ajouter le temps fictif si manquant
+    # Ajouter une heure fictive ("00:00:00") si la colonne time_obs est vide ou NA
     df$time_obs <- ifelse(df$time_obs == "" | is.na(df$time_obs), "00:00:00", df$time_obs)
     
-    # Vérifier et corriger les valeurs non numériques de 'year_obs'
+    # Identifier les entrées non numériques dans year_obs
     non_numeric_indices <- which(is.na(as.numeric(df$year_obs)))
     if (length(non_numeric_indices) > 0) {
-      df$year_obs[non_numeric_indices] <- NA  # Remplace les valeurs non valides par NA
+      df$year_obs[non_numeric_indices] <- NA  # Remplacer les valeurs non valides par NA
     }
     
-    # Conversion des colonnes en valeurs numériques
+    # Convertir year_obs et day_obs en types numériques (si ce n'est pas déjà le cas)
     df$year_obs <- as.numeric(df$year_obs)
     df$day_obs <- as.numeric(df$day_obs)
     
-    return(df)
+    return(df)  # Retourner le fichier nettoyé
   })
   
-  # Fusionner les données
-  g_b <- bind_rows(liste_donnees, .id = "source")
+  # Étape 3 : Fusionner tous les fichiers traités en une seule base de données 
+  bd <- bind_rows(liste_donnees, .id = "source")  # Ajoute une colonne "source" pour identifier la provenance des lignes
   
-  # Supprimer des colonnes non nécessaires
-  colonnes_a_supprimer <- c("obs_unit")  # Liste des colonnes à supprimer
-  g_b <- g_b %>% select(-all_of(colonnes_a_supprimer))  # Supprimer les colonnes spécifiées
+  # Étape 4 : Supprimer les colonnes inutiles
+  colonnes_a_supprimer <- c("obs_unit")  # Cette colonne contient uniquement des NA (ou est jugée inutile)
+  bd <- bd %>% select(-all_of(colonnes_a_supprimer))  # Supprimer proprement ces colonnes
   
-  
-  return(g_b)
+  # Étape 5 : Retourner la base de données fusionnée et nettoyée
+  return(bd)
 }
